@@ -4,7 +4,7 @@
   <name>sbock_position_publisher</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="aibes1001@gmail.com">aibes</maintainer>
+  <maintainer email="alosa@idealista.com">alosa</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>

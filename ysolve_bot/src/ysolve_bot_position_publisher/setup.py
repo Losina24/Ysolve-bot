@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer='danielBurruchaga',
     maintainer_email='dbursol@upv.epsg.es',
-    description='Nav module for ROs2',
+    description='Nav module for ROS2',
     license='MIT',
     tests_require=['pytest'],
     entry_points={
