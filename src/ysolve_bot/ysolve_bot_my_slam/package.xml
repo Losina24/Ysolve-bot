@@ -4,7 +4,7 @@
   <name>my_slam</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="alosa@idealista.com">alosa</maintainer>
+  <maintainer email="ycansam@epsg.upv.es">yeray</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>

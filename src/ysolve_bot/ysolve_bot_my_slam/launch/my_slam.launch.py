@@ -10,8 +10,7 @@ from launch.actions import DeclareLaunchArgument
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    rviz_config_dir = os.path.join(get_package_share_directory('my_slam'), 'config', 'rviz_config.rviz')
-    
+
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
@@ -35,5 +34,5 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': use_sim_time}],
             arguments = ['-resolution','0.05','-publish_period_sec','1.0']
-        )
+        ),
     ]) 
