@@ -1,0 +1,43 @@
+[0.802s] Invoking command in '/home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/src/ysolve_bot_subscriber': PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ysolve_bot_subscriber build --build-base /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build install --prefix /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber --record /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/install.log --single-version-externally-managed
+[1.038s] running egg_info
+[1.039s] creating ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info
+[1.039s] writing ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/PKG-INFO
+[1.040s] writing dependency_links to ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/dependency_links.txt
+[1.040s] writing entry points to ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/entry_points.txt
+[1.040s] writing requirements to ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/requires.txt
+[1.041s] writing top-level names to ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/top_level.txt
+[1.044s] writing manifest file '../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/SOURCES.txt'
+[1.073s] reading manifest file '../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/SOURCES.txt'
+[1.074s] writing manifest file '../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info/SOURCES.txt'
+[1.074s] running build
+[1.075s] running build_py
+[1.075s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build
+[1.075s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib
+[1.075s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber
+[1.076s] copying ysolve_bot_subscriber/odom_pos_subscriber.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber
+[1.076s] copying ysolve_bot_subscriber/__init__.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber
+[1.076s] copying ysolve_bot_subscriber/map_pos_subscriber.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber
+[1.077s] running install
+[1.077s] running install_lib
+[1.078s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber
+[1.078s] copying /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber/odom_pos_subscriber.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber
+[1.079s] copying /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber/__init__.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber
+[1.079s] copying /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build/lib/ysolve_bot_subscriber/map_pos_subscriber.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber
+[1.080s] byte-compiling /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber/odom_pos_subscriber.py to odom_pos_subscriber.cpython-38.pyc
+[1.081s] byte-compiling /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber/__init__.py to __init__.cpython-38.pyc
+[1.082s] byte-compiling /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber/map_pos_subscriber.py to map_pos_subscriber.cpython-38.pyc
+[1.082s] running install_data
+[1.083s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ament_index
+[1.083s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ament_index/resource_index
+[1.084s] creating /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ament_index/resource_index/packages
+[1.084s] copying resource/ysolve_bot_subscriber -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ament_index/resource_index/packages
+[1.084s] copying package.xml -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ysolve_bot_subscriber
+[1.084s] copying launch/robot_map_pos.launch.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ysolve_bot_subscriber
+[1.085s] copying launch/robot_odom_pos.launch.py -> /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/share/ysolve_bot_subscriber
+[1.085s] running install_egg_info
+[1.087s] Copying ../../build/ysolve_bot_subscriber/ysolve_bot_subscriber.egg-info to /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages/ysolve_bot_subscriber-0.0.0-py3.8.egg-info
+[1.088s] running install_scripts
+[1.104s] Installing map_pos_subscriber script to /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/ysolve_bot_subscriber
+[1.105s] Installing odom_pos_subscriber script to /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/ysolve_bot_subscriber
+[1.105s] writing list of installed files to '/home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/install.log'
+[1.159s] Invoked command in '/home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/src/ysolve_bot_subscriber' returned '0': PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ysolve_bot_subscriber build --build-base /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/build install --prefix /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/install/ysolve_bot_subscriber --record /home/raul/Escritorio/Ysolve_bot_mai/ysolve/src/ysolve_bot/build/ysolve_bot_subscriber/install.log --single-version-externally-managed

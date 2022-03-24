@@ -1,0 +1,5 @@
+[console_scripts]
+position1_publisher = ysolve_bot_publisher.position1_publisher:main
+position2_publisher = ysolve_bot_publisher.position2_publisher:main
+position3_publisher = ysolve_bot_publisher.position3_publisher:main
+

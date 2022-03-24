@@ -1,0 +1,4 @@
+[console_scripts]
+map_pos_subscriber = ysolve_bot_position_subscriber.map_pos_subscriber:main
+odom_pos_subscriber = ysolve_bot_position_subscriber.odom_pos_subscriber:main
+
