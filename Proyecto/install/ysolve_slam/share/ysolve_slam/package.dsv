@@ -1,0 +1,6 @@
+source;share/ysolve_slam/hook/pythonpath.ps1
+source;share/ysolve_slam/hook/pythonpath.dsv
+source;share/ysolve_slam/hook/pythonpath.sh
+source;share/ysolve_slam/hook/ament_prefix_path.ps1
+source;share/ysolve_slam/hook/ament_prefix_path.dsv
+source;share/ysolve_slam/hook/ament_prefix_path.sh

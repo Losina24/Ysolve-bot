@@ -1,0 +1,244 @@
+[0.000000] (-) TimerEvent: {}
+[0.001308] (-) JobUnselected: {'identifier': 'Ysolve-bot'}
+[0.001344] (-) JobUnselected: {'identifier': 'my_nav2_system'}
+[0.001364] (-) JobUnselected: {'identifier': 'my_slam'}
+[0.001393] (my_world) JobQueued: {'identifier': 'my_world', 'dependencies': OrderedDict()}
+[0.001415] (my_world) JobStarted: {'identifier': 'my_world'}
+[0.008357] (my_world) JobProgress: {'identifier': 'my_world', 'progress': 'cmake'}
+[0.008993] (my_world) Command: {'cmd': ['/usr/bin/cmake', '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/my_world', '-DCMAKE_INSTALL_PREFIX=/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world'], 'cwd': '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vagrant'), ('SSH_AGENT_PID', '1764'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vagrant/turtlebot3_ws/install/custom_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/vagrant'), ('OLDPWD', '/home/vagrant/Documents/GitHub/Ysolve-bot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PS1', '(rosenv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('MANAGERPID', '1554'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4ccb0dc8ffa87ae381995c7f623d98c3'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'vagrant'), ('JOURNAL_STREAM', '9:34156'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vagrant'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/vagrant/virtualenvs/rosenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-focal:@/tmp/.ICE-unix/1810,unix/ubuntu-focal:/tmp/.ICE-unix/1810'), ('INVOCATION_ID', '4e0f4c5d37d0407e97c4793cea4c7a6d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ba23d31a_6395_46c6_9e41_e5572321dbb4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.146'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '77'), ('AMENT_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install/turtlebot3_simulations:/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo:/home/vagrant/turtlebot3_ws/install/turtlebot3_fake_node:/home/vagrant/turtlebot3_ws/install/show_msg:/home/vagrant/turtlebot3_ws/install/sbock_nav_route:/home/vagrant/turtlebot3_ws/install/my_world:/home/vagrant/turtlebot3_ws/install/my_nav2_system:/home/vagrant/turtlebot3_ws/install/my_first_subscriber:/home/vagrant/turtlebot3_ws/install/my_first_publisher:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VIRTUAL_ENV', '/home/vagrant/virtualenvs/rosenv'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4ccb0dc8ffa87ae381995c7f623d98c3'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vagrant/turtlebot3_ws/install/show_msg/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/sbock_nav_route/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_nav2_system/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_first_subscriber/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_first_publisher/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/custom_interface/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install/turtlebot3_simulations:/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo:/home/vagrant/turtlebot3_ws/install/turtlebot3_fake_node:/home/vagrant/turtlebot3_ws/install/my_world:/home/vagrant/turtlebot3_ws/install/custom_interface:/home/vagrant/turtlebot3_ws/install/show_msg:/home/vagrant/turtlebot3_ws/install/sbock_nav_route:/home/vagrant/turtlebot3_ws/install/my_nav2_system:/home/vagrant/turtlebot3_ws/install/my_first_subscriber:/home/vagrant/turtlebot3_ws/install/my_first_publisher:/opt/ros/foxy')]), 'shell': False}
+[0.097222] (-) TimerEvent: {}
+[0.197882] (-) TimerEvent: {}
+[0.255366] (my_world) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.298108] (-) TimerEvent: {}
+[0.398497] (-) TimerEvent: {}
+[0.414229] (my_world) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.427134] (my_world) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.480284] (my_world) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.483534] (my_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.498721] (-) TimerEvent: {}
+[0.533462] (my_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.542098] (my_world) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.543005] (my_world) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.547068] (my_world) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.598985] (-) TimerEvent: {}
+[0.602545] (my_world) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.603371] (my_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.660257] (my_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.668362] (my_world) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.668724] (my_world) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.678983] (my_world) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.699281] (-) TimerEvent: {}
+[0.712824] (my_world) StdoutLine: {'line': b'-- Found PythonInterp: /home/vagrant/virtualenvs/rosenv/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.712987] (my_world) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/vagrant/virtualenvs/rosenv/bin/python3\n'}
+[0.799426] (-) TimerEvent: {}
+[0.894417] (my_world) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") \n'}
+[0.898248] (my_world) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[0.899689] (-) TimerEvent: {}
+[0.919385] (my_world) StdoutLine: {'line': b'--   Found bullet, version 2.88\n'}
+[0.999848] (-) TimerEvent: {}
+[1.039193] (my_world) StdoutLine: {'line': b'-- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") \n'}
+[1.085064] (my_world) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") \n'}
+[1.100339] (-) TimerEvent: {}
+[1.132591] (my_world) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.0.0") \n'}
+[1.187102] (my_world) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[1.200535] (-) TimerEvent: {}
+[1.300897] (-) TimerEvent: {}
+[1.401280] (-) TimerEvent: {}
+[1.444776] (my_world) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[1.478749] (my_world) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") \n'}
+[1.486570] (my_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.9.2\n'}
+[1.497463] (my_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.501553] (-) TimerEvent: {}
+[1.501706] (my_world) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[1.502185] (my_world) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[1.506030] (my_world) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[1.516645] (my_world) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[1.546271] (my_world) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[1.553130] (my_world) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[1.561626] (my_world) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[1.567940] (my_world) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[1.568081] (my_world) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[1.573895] (my_world) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[1.574041] (my_world) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[1.579251] (my_world) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[1.579365] (my_world) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[1.585284] (my_world) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[1.585404] (my_world) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[1.591965] (my_world) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[1.592143] (my_world) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[1.597149] (my_world) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[1.601851] (-) TimerEvent: {}
+[1.699225] (my_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.9.2\n'}
+[1.702088] (-) TimerEvent: {}
+[1.703185] (my_world) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[1.703709] (my_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[1.720826] (my_world) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") \n'}
+[1.731772] (my_world) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[1.735561] (my_world) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[1.751231] (my_world) StdoutLine: {'line': b'--   Found libzmq , version 4.3.2\n'}
+[1.782525] (my_world) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[1.788112] (my_world) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[1.800904] (my_world) StdoutLine: {'line': b'--   Found uuid, version 2.34.0\n'}
+[1.802185] (-) TimerEvent: {}
+[1.829309] (my_world) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[1.834062] (my_world) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.834486] (my_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[1.851078] (my_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.9.2\n'}
+[1.855716] (my_world) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.868538] (my_world) StdoutLine: {'line': b'--   Found tinyxml2, version 6.2.0\n'}
+[1.900234] (my_world) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.902513] (-) TimerEvent: {}
+[1.905470] (my_world) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.906078] (my_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[1.907004] (my_world) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.907891] (my_world) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.909169] (my_world) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[1.915903] (my_world) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[1.920153] (my_world) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[1.920550] (my_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[1.920804] (my_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.9.2\n'}
+[1.927112] (my_world) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[1.927384] (my_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[1.984777] (my_world) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  \n'}
+[1.995208] (my_world) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[2.003296] (-) TimerEvent: {}
+[2.007550] (my_world) StdoutLine: {'line': b'--   Found jsoncpp, version 1.7.4\n'}
+[2.035046] (my_world) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[2.045946] (my_world) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[2.057169] (my_world) StdoutLine: {'line': b'--   Found libzip, version 1.5.1\n'}
+[2.084318] (my_world) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[2.084899] (my_world) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[2.085343] (my_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.9.2\n'}
+[2.085757] (my_world) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.092472] (my_world) StdoutLine: {'line': b'-- Found gazebo_ros_pkgs: 3.5.3 (/opt/ros/foxy/share/gazebo_ros_pkgs/cmake)\n'}
+[2.097549] (my_world) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.4 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[2.103591] (-) TimerEvent: {}
+[2.144656] (my_world) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.156417] (my_world) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[2.203757] (-) TimerEvent: {}
+[2.242381] (my_world) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.267839] (my_world) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[2.303893] (-) TimerEvent: {}
+[2.359301] (my_world) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.404032] (-) TimerEvent: {}
+[2.456563] (my_world) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.4 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[2.504202] (-) TimerEvent: {}
+[2.525886] (my_world) StdoutLine: {'line': b'-- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[2.588231] (my_world) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[2.591619] (my_world) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.593207] (my_world) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.604320] (-) TimerEvent: {}
+[2.704594] (-) TimerEvent: {}
+[2.740885] (my_world) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[2.804892] (-) TimerEvent: {}
+[2.810667] (my_world) StdoutLine: {'line': b'-- Found tf2: 0.13.12 (/opt/ros/foxy/share/tf2/cmake)\n'}
+[2.824520] (my_world) StdoutLine: {'line': b'-- Found turtlebot3_gazebo: 2.2.3 (/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake)\n'}
+[2.905247] (-) TimerEvent: {}
+[2.964194] (my_world) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.971553] (my_world) StdoutLine: {'line': b'-- Generating done\n'}
+[2.973879] (my_world) StdoutLine: {'line': b'-- Build files have been written to: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world\n'}
+[2.981363] (my_world) CommandEnded: {'returncode': 0}
+[2.984146] (my_world) JobProgress: {'identifier': 'my_world', 'progress': 'build'}
+[2.984270] (my_world) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world', '--', '-j2', '-l2'], 'cwd': '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vagrant'), ('SSH_AGENT_PID', '1764'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vagrant/turtlebot3_ws/install/custom_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/vagrant'), ('OLDPWD', '/home/vagrant/Documents/GitHub/Ysolve-bot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PS1', '(rosenv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('MANAGERPID', '1554'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4ccb0dc8ffa87ae381995c7f623d98c3'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'vagrant'), ('JOURNAL_STREAM', '9:34156'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vagrant'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/vagrant/virtualenvs/rosenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-focal:@/tmp/.ICE-unix/1810,unix/ubuntu-focal:/tmp/.ICE-unix/1810'), ('INVOCATION_ID', '4e0f4c5d37d0407e97c4793cea4c7a6d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ba23d31a_6395_46c6_9e41_e5572321dbb4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.146'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '77'), ('AMENT_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install/turtlebot3_simulations:/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo:/home/vagrant/turtlebot3_ws/install/turtlebot3_fake_node:/home/vagrant/turtlebot3_ws/install/show_msg:/home/vagrant/turtlebot3_ws/install/sbock_nav_route:/home/vagrant/turtlebot3_ws/install/my_world:/home/vagrant/turtlebot3_ws/install/my_nav2_system:/home/vagrant/turtlebot3_ws/install/my_first_subscriber:/home/vagrant/turtlebot3_ws/install/my_first_publisher:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VIRTUAL_ENV', '/home/vagrant/virtualenvs/rosenv'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4ccb0dc8ffa87ae381995c7f623d98c3'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vagrant/turtlebot3_ws/install/show_msg/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/sbock_nav_route/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_nav2_system/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_first_subscriber/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_first_publisher/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/custom_interface/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install/turtlebot3_simulations:/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo:/home/vagrant/turtlebot3_ws/install/turtlebot3_fake_node:/home/vagrant/turtlebot3_ws/install/my_world:/home/vagrant/turtlebot3_ws/install/custom_interface:/home/vagrant/turtlebot3_ws/install/show_msg:/home/vagrant/turtlebot3_ws/install/sbock_nav_route:/home/vagrant/turtlebot3_ws/install/my_nav2_system:/home/vagrant/turtlebot3_ws/install/my_first_subscriber:/home/vagrant/turtlebot3_ws/install/my_first_publisher:/opt/ros/foxy')]), 'shell': False}
+[3.005432] (-) TimerEvent: {}
+[3.014668] (my_world) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target turtlebot3_drive\x1b[0m\n'}
+[3.105706] (-) TimerEvent: {}
+[3.192409] (my_world) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o\x1b[0m\n'}
+[3.205800] (-) TimerEvent: {}
+[3.306231] (-) TimerEvent: {}
+[3.406580] (-) TimerEvent: {}
+[3.507465] (-) TimerEvent: {}
+[3.607794] (-) TimerEvent: {}
+[3.708068] (-) TimerEvent: {}
+[3.808467] (-) TimerEvent: {}
+[3.908821] (-) TimerEvent: {}
+[4.009186] (-) TimerEvent: {}
+[4.109491] (-) TimerEvent: {}
+[4.209791] (-) TimerEvent: {}
+[4.310092] (-) TimerEvent: {}
+[4.410389] (-) TimerEvent: {}
+[4.510662] (-) TimerEvent: {}
+[4.610983] (-) TimerEvent: {}
+[4.711290] (-) TimerEvent: {}
+[4.812427] (-) TimerEvent: {}
+[4.912701] (-) TimerEvent: {}
+[5.013040] (-) TimerEvent: {}
+[5.113322] (-) TimerEvent: {}
+[5.213696] (-) TimerEvent: {}
+[5.313952] (-) TimerEvent: {}
+[5.414307] (-) TimerEvent: {}
+[5.514674] (-) TimerEvent: {}
+[5.614999] (-) TimerEvent: {}
+[5.715302] (-) TimerEvent: {}
+[5.816446] (-) TimerEvent: {}
+[5.916751] (-) TimerEvent: {}
+[6.017087] (-) TimerEvent: {}
+[6.117398] (-) TimerEvent: {}
+[6.217711] (-) TimerEvent: {}
+[6.317962] (-) TimerEvent: {}
+[6.418301] (-) TimerEvent: {}
+[6.518610] (-) TimerEvent: {}
+[6.619218] (-) TimerEvent: {}
+[6.719480] (-) TimerEvent: {}
+[6.820452] (-) TimerEvent: {}
+[6.920762] (-) TimerEvent: {}
+[7.021102] (-) TimerEvent: {}
+[7.121419] (-) TimerEvent: {}
+[7.221729] (-) TimerEvent: {}
+[7.322036] (-) TimerEvent: {}
+[7.422318] (-) TimerEvent: {}
+[7.522607] (-) TimerEvent: {}
+[7.622943] (-) TimerEvent: {}
+[7.723490] (-) TimerEvent: {}
+[7.824210] (-) TimerEvent: {}
+[7.924825] (-) TimerEvent: {}
+[7.950267] (my_world) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable turtlebot3_drive\x1b[0m\n'}
+[8.025011] (-) TimerEvent: {}
+[8.125504] (-) TimerEvent: {}
+[8.225817] (-) TimerEvent: {}
+[8.226412] (my_world) StdoutLine: {'line': b'[100%] Built target turtlebot3_drive\n'}
+[8.234044] (my_world) CommandEnded: {'returncode': 0}
+[8.256100] (my_world) JobProgress: {'identifier': 'my_world', 'progress': 'install'}
+[8.264585] (my_world) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world'], 'cwd': '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vagrant'), ('SSH_AGENT_PID', '1764'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vagrant/turtlebot3_ws/install/custom_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/vagrant'), ('OLDPWD', '/home/vagrant/Documents/GitHub/Ysolve-bot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PS1', '(rosenv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('MANAGERPID', '1554'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4ccb0dc8ffa87ae381995c7f623d98c3'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'vagrant'), ('JOURNAL_STREAM', '9:34156'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vagrant'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/vagrant/virtualenvs/rosenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-focal:@/tmp/.ICE-unix/1810,unix/ubuntu-focal:/tmp/.ICE-unix/1810'), ('INVOCATION_ID', '4e0f4c5d37d0407e97c4793cea4c7a6d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ba23d31a_6395_46c6_9e41_e5572321dbb4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.146'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '77'), ('AMENT_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install/turtlebot3_simulations:/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo:/home/vagrant/turtlebot3_ws/install/turtlebot3_fake_node:/home/vagrant/turtlebot3_ws/install/show_msg:/home/vagrant/turtlebot3_ws/install/sbock_nav_route:/home/vagrant/turtlebot3_ws/install/my_world:/home/vagrant/turtlebot3_ws/install/my_nav2_system:/home/vagrant/turtlebot3_ws/install/my_first_subscriber:/home/vagrant/turtlebot3_ws/install/my_first_publisher:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VIRTUAL_ENV', '/home/vagrant/virtualenvs/rosenv'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_world'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4ccb0dc8ffa87ae381995c7f623d98c3'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vagrant/turtlebot3_ws/install/show_msg/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/sbock_nav_route/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_nav2_system/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_first_subscriber/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/my_first_publisher/lib/python3.8/site-packages:/home/vagrant/turtlebot3_ws/install/custom_interface/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/vagrant/turtlebot3_ws/install/turtlebot3_simulations:/home/vagrant/turtlebot3_ws/install/turtlebot3_gazebo:/home/vagrant/turtlebot3_ws/install/turtlebot3_fake_node:/home/vagrant/turtlebot3_ws/install/my_world:/home/vagrant/turtlebot3_ws/install/custom_interface:/home/vagrant/turtlebot3_ws/install/show_msg:/home/vagrant/turtlebot3_ws/install/sbock_nav_route:/home/vagrant/turtlebot3_ws/install/my_nav2_system:/home/vagrant/turtlebot3_ws/install/my_first_subscriber:/home/vagrant/turtlebot3_ws/install/my_first_publisher:/opt/ros/foxy')]), 'shell': False}
+[8.271256] (my_world) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.271710] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/lib/my_world/turtlebot3_drive\n'}
+[8.273965] (my_world) StdoutLine: {'line': b'-- Set runtime path of "/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/lib/my_world/turtlebot3_drive" to ""\n'}
+[8.274110] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//launch\n'}
+[8.274256] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//launch/turtlebot3_my_world.launch.py\n'}
+[8.275395] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models\n'}
+[8.275611] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger\n'}
+[8.275751] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/meshes\n'}
+[8.275868] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/meshes/lds.dae\n'}
+[8.277436] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/meshes/tire.dae\n'}
+[8.278801] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/meshes/burger_base.dae\n'}
+[8.279610] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/model.sdf\n'}
+[8.280483] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/model-1_4.sdf\n'}
+[8.281299] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/turtlebot3_burger/model.config\n'}
+[8.281988] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/my_world\n'}
+[8.282143] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/my_world/model.sdf\n'}
+[8.283705] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//models/my_world/model.config\n'}
+[8.284361] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//world\n'}
+[8.284516] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world//world/burger.model\n'}
+[8.285241] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/include/\n'}
+[8.285382] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/include//my_world\n'}
+[8.285593] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/ament_index/resource_index/package_run_dependencies/my_world\n'}
+[8.285791] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/ament_index/resource_index/parent_prefix_path/my_world\n'}
+[8.285977] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/environment/ament_prefix_path.sh\n'}
+[8.286171] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/environment/ament_prefix_path.dsv\n'}
+[8.286352] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/environment/path.sh\n'}
+[8.286506] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/environment/path.dsv\n'}
+[8.286657] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/local_setup.bash\n'}
+[8.286885] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/local_setup.sh\n'}
+[8.287064] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/local_setup.zsh\n'}
+[8.287255] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/local_setup.dsv\n'}
+[8.287458] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/package.dsv\n'}
+[8.287660] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/ament_index/resource_index/packages/my_world\n'}
+[8.287839] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[8.288002] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[8.288207] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/cmake/my_worldConfig.cmake\n'}
+[8.288337] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/cmake/my_worldConfig-version.cmake\n'}
+[8.288490] (my_world) StdoutLine: {'line': b'-- Installing: /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_world/share/my_world/package.xml\n'}
+[8.291703] (my_world) CommandEnded: {'returncode': 0}
+[8.325097] (my_world) JobEnded: {'identifier': 'my_world', 'rc': 0}
+[8.325933] (-) TimerEvent: {}
+[8.326010] (-) EventReactorShutdown: {}

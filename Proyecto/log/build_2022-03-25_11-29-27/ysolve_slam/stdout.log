@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/ysolve_slam/ysolve_slam.egg-info
+writing ../../build/ysolve_slam/ysolve_slam.egg-info/PKG-INFO
+writing dependency_links to ../../build/ysolve_slam/ysolve_slam.egg-info/dependency_links.txt
+writing entry points to ../../build/ysolve_slam/ysolve_slam.egg-info/entry_points.txt
+writing requirements to ../../build/ysolve_slam/ysolve_slam.egg-info/requires.txt
+writing top-level names to ../../build/ysolve_slam/ysolve_slam.egg-info/top_level.txt
+writing manifest file '../../build/ysolve_slam/ysolve_slam.egg-info/SOURCES.txt'
+reading manifest file '../../build/ysolve_slam/ysolve_slam.egg-info/SOURCES.txt'
+writing manifest file '../../build/ysolve_slam/ysolve_slam.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/ysolve_slam/build
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/ysolve_slam/build/lib
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/ysolve_slam/build/lib/ysolve_slam
+copying ysolve_slam/__init__.py -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/ysolve_slam/build/lib/ysolve_slam
+running install
+running install_lib
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/lib/python3.8/site-packages/ysolve_slam
+copying /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/ysolve_slam/build/lib/ysolve_slam/__init__.py -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/lib/python3.8/site-packages/ysolve_slam
+byte-compiling /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/lib/python3.8/site-packages/ysolve_slam/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ament_index
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ament_index/resource_index
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ament_index/resource_index/packages
+copying resource/ysolve_slam -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ament_index/resource_index/packages
+copying package.xml -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam/map
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam/rviz
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam/launch
+copying launch/ysolve_slam.launch.py -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam/launch
+creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam/config
+copying config/ysolve_slam.lua -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/share/ysolve_slam/config
+running install_egg_info
+Copying ../../build/ysolve_slam/ysolve_slam.egg-info to /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/ysolve_slam/lib/python3.8/site-packages/ysolve_slam-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/ysolve_slam/install.log'

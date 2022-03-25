@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000086] (-) JobUnselected: {'identifier': 'ysolve-bot'}
+[0.000106] (-) JobUnselected: {'identifier': 'ysolve_nav2_system'}
+[0.000119] (-) JobUnselected: {'identifier': 'ysolve_slam'}
+[0.000174] (-) JobUnselected: {'identifier': 'ysolve_world'}
+[0.000188] (-) EventReactorShutdown: {}

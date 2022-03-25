@@ -1,0 +1,47 @@
+[0.597s] Invoking command in '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/my_nav2_system': PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/my_nav2_system build --build-base /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build install --prefix /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system --record /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/install.log --single-version-externally-managed
+[0.743s] running egg_info
+[0.744s] creating ../build/my_nav2_system/my_nav2_system.egg-info
+[0.744s] writing ../build/my_nav2_system/my_nav2_system.egg-info/PKG-INFO
+[0.744s] writing dependency_links to ../build/my_nav2_system/my_nav2_system.egg-info/dependency_links.txt
+[0.744s] writing entry points to ../build/my_nav2_system/my_nav2_system.egg-info/entry_points.txt
+[0.744s] writing requirements to ../build/my_nav2_system/my_nav2_system.egg-info/requires.txt
+[0.744s] writing top-level names to ../build/my_nav2_system/my_nav2_system.egg-info/top_level.txt
+[0.751s] writing manifest file '../build/my_nav2_system/my_nav2_system.egg-info/SOURCES.txt'
+[0.777s] reading manifest file '../build/my_nav2_system/my_nav2_system.egg-info/SOURCES.txt'
+[0.777s] writing manifest file '../build/my_nav2_system/my_nav2_system.egg-info/SOURCES.txt'
+[0.777s] running build
+[0.777s] running build_py
+[0.777s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build
+[0.777s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build/lib
+[0.777s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build/lib/my_nav2_system
+[0.777s] copying my_nav2_system/__init__.py -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build/lib/my_nav2_system
+[0.778s] running install
+[0.778s] running install_lib
+[0.779s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/python3.8/site-packages/my_nav2_system
+[0.779s] copying /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build/lib/my_nav2_system/__init__.py -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/python3.8/site-packages/my_nav2_system
+[0.779s] byte-compiling /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/python3.8/site-packages/my_nav2_system/__init__.py to __init__.cpython-38.pyc
+[0.780s] running install_data
+[0.780s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/ament_index
+[0.780s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/ament_index/resource_index
+[0.780s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/ament_index/resource_index/packages
+[0.780s] copying resource/my_nav2_system -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/ament_index/resource_index/packages
+[0.780s] copying package.xml -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system
+[0.780s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/launch
+[0.780s] copying launch/my_tb3_sim_nav2.launch.py -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/launch
+[0.781s] creating /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.781s] copying config/my_map.yaml -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.782s] copying config/turtlebot3_world.yaml -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.783s] copying config/project_params.yaml -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.783s] copying config/turtlebot3_world.pgm -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.784s] copying config/my_map.pgm -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.785s] copying config/nav2_default_view_new.rviz -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.786s] copying config/navigate_w_replanning_and_recovery.xml -> /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/share/my_nav2_system/config
+[0.786s] running install_egg_info
+[0.788s] Copying ../build/my_nav2_system/my_nav2_system.egg-info to /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/python3.8/site-packages/my_nav2_system-0.0.0-py3.8.egg-info
+[0.788s] running install_scripts
+[0.801s] Installing go_to_pose script to /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/my_nav2_system
+[0.801s] Installing initial_pose_pub script to /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/my_nav2_system
+[0.801s] Installing load_map script to /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/my_nav2_system
+[0.801s] Installing nav_to_pose script to /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/my_nav2_system
+[0.802s] writing list of installed files to '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/install.log'
+[0.816s] Invoked command in '/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/my_nav2_system' returned '0': PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/my_nav2_system build --build-base /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/build install --prefix /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/install/my_nav2_system --record /home/vagrant/Documents/GitHub/Ysolve-bot/Proyecto/build/my_nav2_system/install.log --single-version-externally-managed
