@@ -1,3 +1,28 @@
+/* Fonts */
+
+@font-face {
+    font-family: MonumentExtendedRegular;
+    src: url(../assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+    font-family: MonumentExtendedLight;
+    src: url(../assets/fonts/MonumentExtended-Light.ttf);
+}
+
+@font-face {
+    font-family: MonumentExtendedUltrabold;
+    src: url(../assets/fonts/MonumentExtended-Ultrabold.otf);
+}
+
+@font-face {
+    font-family: MonumentExtendedBlack;
+    src: url(../assets/fonts/MonumentExtended-Black.ttf);
+}
+html, body{
+    font-family: MonumentExtendedRegular;
+}
+
 /********** common setting **********/
 h2 {
     font-size: 2.8rem !important;
@@ -58,7 +83,18 @@ button {
     border: 2px solid #192440 !important;
     color: #192440;
 }
-
+.plan-ghost{
+    border-radius: 22px !important;
+    transition: .3s ease-in-out !important;
+}
+.plan-ghost:hover{
+    background: #192440;
+    color: white;
+}
+.plan-ghost:hover>.cta-ghost{
+    background: #00FFAD;
+    color: #192440;
+}
 .cta-ghost:hover {
     color: #ffffff;
     background: #121a2e;
@@ -74,7 +110,7 @@ button {
 }
 
 #banner header img {
-    max-width: 80px;
+    max-width: 10rem;
 }
 
 /********** feature (skew background) **********/
