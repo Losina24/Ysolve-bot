@@ -1,9 +1,0 @@
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/install/strip.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/install/local.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/install.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/list_install_components.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/rebuild_cache.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/edit_cache.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/test.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/ysolve_bot_uninstall.dir
-/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot/CMakeFiles/uninstall.dir
