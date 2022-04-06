@@ -22,7 +22,21 @@
 html, body{
     font-family: MonumentExtendedRegular;
 }
-
+/**FORM LOGIN */
+.container-login{
+    position: absolute;
+    top: 10rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#form-login{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+}
 /********** common setting **********/
 h2 {
     font-size: 2.8rem !important;
@@ -121,6 +135,7 @@ button {
 
 #feature-first {
     background: linear-gradient(168deg, #ffffff 55%, #00FFAD 0);
+    
 }
 
 #feature-last {

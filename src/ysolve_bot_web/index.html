@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- font-awesome -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- AOS -->
     <link rel="stylesheet" href="css/aos.css">
 </head>
@@ -27,7 +27,7 @@
                         <img src="img/Logo_pc.svg" alt="logo">
                     </div>
                     <div class="col-6 align-self-center text-right">
-                        <a href="#" class="text-white lead">Contacto</a>
+                        <button class="text-white lead" style="background-color: transparent;border: 0px;">Login</button>
                     </div>
                 </div>
             </header>
@@ -43,39 +43,53 @@
             <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">Contacto</a>
         </div>
     </div>
+
+    <!-- FORM LOGIN-->
+    <div class="container-login">
+        <form id="form-login">
+            <h3>Login</h3>
+            <p>Usuario</p>
+            <input id="username" name="user" type="text" placeholder="usuario">
+            <p>Contraseña</p>
+            <input id="password" name="password" type="password" placeholder="Contraseña">
+            <button  type="button"id="button-form" style="margin-top: 10px;">Enviar</button>
+        </form>
+    </div>
+
+
     <!-- three-blcok -->
     <div class="container my-5 py-2">
         <h2 class="text-center font-weight-bold my-5">Solución más sencilla para proteger tus terrenos</h2>
         <div class="row">
             <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="false" class="col-md-4 text-center">
-                <img src="img/smart-protect-1.jpg" alt="Anti-spam" class="mx-auto">
+                <i class="fa-solid fa-battery-full" style="font-size: 5rem;margin: 3rem;"></i>
                 <h4>Duradero</h4>
                 <p>Batería con la suficiente autonomía para durar hasta 8 horas</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="false" class="col-md-4 text-center">
-                <img src="img/smart-protect-2.jpg" alt="Phishing Detect" class="mx-auto">
+                <i class="fa-solid fa-tower-observation" style="font-size: 5rem;margin: 3rem;"></i>
                 <h4>Detección de Incendios</h4>
                 <p>Sistema de Inteligencia Artificial con Python para detectar incendios</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="false" class="col-md-4 text-center">
-                <img src="img/smart-protect-3.jpg" alt="Smart Scan" class="mx-auto">
+                <i class="fa-solid fa-magnifying-glass" style="font-size: 5rem;margin: 3rem;"></i>
                 <h4>Scaneo sencillo</h4>
                 <p>Analisis del entorno y escaneo de imagenes muy rápido gracias al AWS</p>
             </div>
         </div>
         <div class="row">
             <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="false" class="col-md-4 text-center">
-                <img src="img/smart-protect-1.jpg" alt="Anti-spam" class="mx-auto">
+                <i class="fa-solid fa-route " style="font-size: 5rem;margin: 3rem;"></i>
                 <h4>Autonónomo</h4>
                 <p>Con unas simples ordenes el robot es capaz de moverse por si solo y obtener todos los resultados requeridos</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="false" class="col-md-4 text-center">
-                <img src="img/smart-protect-2.jpg" alt="Phishing Detect" class="mx-auto">
+                <i class="fa-solid fa-sliders" style="font-size: 5rem;margin: 3rem;"></i>
                 <h4>Configuración Rapida</h4>
                 <p>La instalación del robot en el entorno es muy sencilla</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="false" class="col-md-4 text-center">
-                <img src="img/smart-protect-3.jpg" alt="Smart Scan" class="mx-auto">
+                <i class="fa-solid fa-mobile-screen-button"  style="font-size: 5rem;margin: 3rem;"></i>
                 <h4>Control via Web y Movil</h4>
                 <p>Permite enviar ordenes al robot desde cualquier lugar y momento</p>
             </div>
@@ -231,12 +245,30 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
     <script src="js/aos.js"></script>
     <script>
       AOS.init({
       });
+    </script>
+
+    <!--SCRIPT LOGIN-->
+    <script>
+        $(document).ready(function(){
+            $("#button-form").click(function(){
+                var email = $("#username").val();
+                var password = $("#password").val();
+                // Checking for blank fields.
+                if( email =='' || password ==''){
+                    $('input[type="text"],input[type="password"]').css("border","2px solid red");
+                    $('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
+                }else if(email == 'ysolve' || password == 'ysolve'){
+                    alert("rabo");
+                }
+            });
+        });
     </script>
 </body>
 
