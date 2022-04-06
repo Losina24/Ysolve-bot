@@ -1,0 +1,42 @@
+[0.014s] Invoking command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/yeray/Documentos/GitHub/Ysolve-bot/src/ysolve_bot/ysolve_bot -DCMAKE_INSTALL_PREFIX=/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot
+[0.079s] -- The C compiler identification is GNU 9.4.0
+[0.140s] -- The CXX compiler identification is GNU 9.4.0
+[0.146s] -- Check for working C compiler: /usr/bin/cc
+[0.218s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.219s] -- Detecting C compiler ABI info
+[0.289s] -- Detecting C compiler ABI info - done
+[0.302s] -- Detecting C compile features
+[0.302s] -- Detecting C compile features - done
+[0.305s] -- Check for working CXX compiler: /usr/bin/c++
+[0.387s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.388s] -- Detecting CXX compiler ABI info
+[0.471s] -- Detecting CXX compiler ABI info - done
+[0.484s] -- Detecting CXX compile features
+[0.484s] -- Detecting CXX compile features - done
+[0.488s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.523s] -- Found PythonInterp: /home/yeray/virtualenvs/rosenv/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.523s] -- Using PYTHON_EXECUTABLE: /home/yeray/virtualenvs/rosenv/bin/python3
+[0.812s] -- Configuring done
+[0.814s] -- Generating done
+[0.815s] -- Build files have been written to: /home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot
+[0.818s] Invoked command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/yeray/Documentos/GitHub/Ysolve-bot/src/ysolve_bot/ysolve_bot -DCMAKE_INSTALL_PREFIX=/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot
+[0.821s] Invoking command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot -- -j4 -l4
+[0.862s] Invoked command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot -- -j4 -l4
+[0.896s] Invoking command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot
+[0.905s] -- Install configuration: ""
+[0.906s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/package_run_dependencies/ysolve_bot
+[0.906s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/parent_prefix_path/ysolve_bot
+[0.906s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/ament_prefix_path.sh
+[0.906s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/ament_prefix_path.dsv
+[0.906s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/path.sh
+[0.906s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/path.dsv
+[0.907s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.bash
+[0.907s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.sh
+[0.907s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.zsh
+[0.907s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.dsv
+[0.907s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/package.dsv
+[0.907s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/packages/ysolve_bot
+[0.908s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/cmake/ysolve_botConfig.cmake
+[0.908s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/cmake/ysolve_botConfig-version.cmake
+[0.908s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/package.xml
+[0.910s] Invoked command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot

@@ -1,0 +1,15 @@
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/package_run_dependencies/ysolve_bot
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/parent_prefix_path/ysolve_bot
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/ament_prefix_path.sh
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/ament_prefix_path.dsv
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/path.sh
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/path.dsv
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.bash
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.sh
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.zsh
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.dsv
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/package.dsv
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/packages/ysolve_bot
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/cmake/ysolve_botConfig.cmake
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/cmake/ysolve_botConfig-version.cmake
+/home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/package.xml

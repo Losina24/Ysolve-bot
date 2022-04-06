@@ -1,0 +1,4 @@
+source;share/ysolve_bot/local_setup.bash
+source;share/ysolve_bot/local_setup.dsv
+source;share/ysolve_bot/local_setup.sh
+source;share/ysolve_bot/local_setup.zsh

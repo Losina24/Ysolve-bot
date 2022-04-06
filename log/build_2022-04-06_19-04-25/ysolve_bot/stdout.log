@@ -1,0 +1,36 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /home/yeray/virtualenvs/rosenv/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /home/yeray/virtualenvs/rosenv/bin/python3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yeray/Documentos/GitHub/Ysolve-bot/build/ysolve_bot
+-- Install configuration: ""
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/package_run_dependencies/ysolve_bot
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/parent_prefix_path/ysolve_bot
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/ament_prefix_path.sh
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/ament_prefix_path.dsv
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/path.sh
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/environment/path.dsv
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.bash
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.sh
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.zsh
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/local_setup.dsv
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/package.dsv
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ament_index/resource_index/packages/ysolve_bot
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/cmake/ysolve_botConfig.cmake
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/cmake/ysolve_botConfig-version.cmake
+-- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/ysolve_bot/share/ysolve_bot/package.xml
