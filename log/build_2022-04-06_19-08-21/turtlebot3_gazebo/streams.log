@@ -1,0 +1,321 @@
+[0.034s] Invoking command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/yeray/Documentos/GitHub/Ysolve-bot/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo
+[0.130s] -- The C compiler identification is GNU 9.4.0
+[0.243s] -- The CXX compiler identification is GNU 9.4.0
+[0.253s] -- Check for working C compiler: /usr/bin/cc
+[0.346s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.347s] -- Detecting C compiler ABI info
+[0.432s] -- Detecting C compiler ABI info - done
+[0.447s] -- Detecting C compile features
+[0.448s] -- Detecting C compile features - done
+[0.452s] -- Check for working CXX compiler: /usr/bin/c++
+[0.556s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.557s] -- Detecting CXX compiler ABI info
+[0.656s] -- Detecting CXX compiler ABI info - done
+[0.672s] -- Detecting CXX compile features
+[0.672s] -- Detecting CXX compile features - done
+[0.676s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.720s] -- Found PythonInterp: /home/yeray/virtualenvs/rosenv/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.722s] -- Using PYTHON_EXECUTABLE: /home/yeray/virtualenvs/rosenv/bin/python3
+[0.925s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+[0.930s] -- Checking for module 'bullet>=2.82'
+[0.955s] --   Found bullet, version 2.88
+[1.125s] -- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") 
+[1.205s] -- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") 
+[1.281s] -- Found assimp: /usr/include (found version "5.0.0") 
+[1.317s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.707s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.741s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+[1.748s] -- Looking for ignition-math6 -- found version 6.9.2
+[1.757s] -- Searching for dependencies of ignition-math6
+[1.759s] -- Looking for OGRE...
+[1.760s] -- OGRE_PREFIX_WATCH changed.
+[1.766s] -- Checking for module 'OGRE'
+[1.787s] --   Found OGRE, version 1.9.0
+[1.842s] -- Found Ogre Ghadamon (1.9.0)
+[1.858s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.873s] -- Looking for OGRE_Paging...
+[1.884s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.884s] -- Looking for OGRE_Terrain...
+[1.897s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.897s] -- Looking for OGRE_Property...
+[1.909s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.909s] -- Looking for OGRE_RTShaderSystem...
+[1.922s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.922s] -- Looking for OGRE_Volume...
+[1.930s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.930s] -- Looking for OGRE_Overlay...
+[1.942s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[2.179s] -- Looking for ignition-math6 -- found version 6.9.2
+[2.183s] -- Looking for ignition-transport8 -- found version 8.2.1
+[2.183s] -- Searching for dependencies of ignition-transport8
+[2.207s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+[2.221s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.227s] -- Checking for module 'libzmq >= 4'
+[2.249s] --   Found libzmq , version 4.3.2
+[2.308s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[2.316s] -- Checking for module 'uuid'
+[2.341s] --   Found uuid, version 2.34.0
+[2.393s] -- Found UUID: TRUE  
+[2.396s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.397s] -- Searching for dependencies of ignition-msgs5
+[2.431s] -- Looking for ignition-math6 -- found version 6.9.2
+[2.439s] -- Checking for module 'tinyxml2'
+[2.459s] --   Found tinyxml2, version 6.2.0
+[2.517s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.522s] -- Looking for ignition-common3 -- found version 3.14.0
+[2.523s] -- Searching for dependencies of ignition-common3
+[2.523s] -- Looking for dlfcn.h - found
+[2.525s] -- Looking for libdl - found
+[2.526s] -- Found DL: TRUE  
+[2.534s] -- Searching for <ignition-common3> component [graphics]
+[2.539s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[2.539s] -- Searching for dependencies of ignition-common3-graphics
+[2.540s] -- Looking for ignition-math6 -- found version 6.9.2
+[2.544s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[2.544s] -- Searching for dependencies of ignition-fuel_tools4
+[2.647s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+[2.663s] -- Checking for module 'jsoncpp'
+[2.686s] --   Found jsoncpp, version 1.7.4
+[2.743s] -- Found JSONCPP: TRUE  
+[2.751s] -- Checking for module 'libzip'
+[2.775s] --   Found libzip, version 1.5.1
+[2.834s] -- Found ZIP: TRUE  
+[2.837s] -- Looking for ignition-common3 -- found version 3.14.0
+[2.837s] -- Looking for ignition-math6 -- found version 6.9.2
+[2.838s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.841s] -- Found gazebo_ros_pkgs: 3.5.3 (/opt/ros/foxy/share/gazebo_ros_pkgs/cmake)
+[2.844s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.895s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.913s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.047s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.082s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.195s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.315s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[3.415s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[3.484s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.487s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.490s] -- Found Threads: TRUE  
+[3.686s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.787s] -- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+[3.972s] -- Configuring done
+[4.022s] -- Generating done
+[4.025s] -- Build files have been written to: /home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo
+[4.041s] Invoked command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/yeray/Documentos/GitHub/Ysolve-bot/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo
+[4.044s] Invoking command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo -- -j4 -l4
+[4.102s] [35m[1mScanning dependencies of target obstacle1[0m
+[4.102s] [35m[1mScanning dependencies of target obstacles[0m
+[4.109s] [35m[1mScanning dependencies of target obstacle2[0m
+[4.138s] [35m[1mScanning dependencies of target turtlebot3_drive[0m
+[4.292s] [ 12%] [32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o[0m
+[4.346s] [ 25%] [32mBuilding CXX object CMakeFiles/obstacles.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc.o[0m
+[4.349s] [ 37%] [32mBuilding CXX object CMakeFiles/obstacle1.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc.o[0m
+[4.387s] [ 50%] [32mBuilding CXX object CMakeFiles/obstacle2.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc.o[0m
+[23.954s] [ 62%] [32m[1mLinking CXX shared library libobstacle2.so[0m
+[24.728s] [ 62%] Built target obstacle2
+[25.375s] [ 75%] [32m[1mLinking CXX executable turtlebot3_drive[0m
+[26.138s] [ 75%] Built target turtlebot3_drive
+[27.806s] [ 87%] [32m[1mLinking CXX shared library libobstacle1.so[0m
+[28.199s] [100%] [32m[1mLinking CXX shared library libobstacles.so[0m
+[28.220s] [100%] Built target obstacle1
+[28.573s] [100%] Built target obstacles
+[28.586s] Invoked command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo -- -j4 -l4
+[28.624s] Invoking command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo
+[28.635s] -- Install configuration: ""
+[28.635s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive
+[28.638s] -- Set runtime path of "/home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive" to ""
+[28.638s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch
+[28.638s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_house.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage3.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_autorace.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage2.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/robot_state_publisher.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage4.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage1.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/empty_world.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_world.launch.py
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models
+[28.639s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model-1_4.sdf
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model.config
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model.sdf
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes/wall.dae
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes/hexagon.dae
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house/model.config
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house/model.sdf
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace
+[28.640s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_wall
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_wall/model.config
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_wall/model.sdf
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/textures
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/textures/tunnel.png
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/scripts
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/scripts/tunnel.material
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/model.config
+[28.641s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/model.sdf
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/ground
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/ground/model.config
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/ground/model.sdf
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_red
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_red/model.config
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_red/model.sdf
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/model.config
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_obstacles
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_obstacles/model.config
+[28.642s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_obstacles/model.sdf
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/textures
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/textures/traffic_bar.png
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/scripts
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/scripts/traffic_bar.material
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/model.config
+[28.643s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/model.sdf
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/textures
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/textures/traffic_parking.png
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/scripts
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/scripts/traffic_parking.material
+[28.644s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/model.config
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/model.sdf
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/textures
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/textures/traffic_stop.png
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/scripts
+[28.645s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/scripts/traffic_stop.material
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/model.config
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/model.sdf
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/textures
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/textures/course.png
+[28.646s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/scripts
+[28.647s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/scripts/course.material
+[28.647s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/model.config
+[28.647s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/model.sdf
+[28.647s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_green
+[28.647s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_green/model.config
+[28.647s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_green/model.sdf
+[28.652s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/lights
+[28.652s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/lights/model.config
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/lights/model.sdf
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/textures
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/textures/traffic_bar.png
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/scripts
+[28.653s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/scripts/traffic_bar.material
+[28.654s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/model.config
+[28.654s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/model.sdf
+[28.654s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_yellow
+[28.654s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_yellow/model.config
+[28.654s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_yellow/model.sdf
+[28.654s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model-1_4.sdf
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.config
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.sdf
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes/tire.dae
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes/lds.dae
+[28.655s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes/burger_base.dae
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model-1_4.sdf
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model.config
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model.sdf
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/tire.dae
+[28.656s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/r200.dae
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/waffle_base.dae
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/lds.dae
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.config
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.sdf
+[28.657s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1
+[28.658s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.config
+[28.658s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.sdf
+[28.658s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles
+[28.658s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.config
+[28.658s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.sdf
+[28.659s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2
+[28.659s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.config
+[28.659s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.sdf
+[28.659s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/model.config
+[28.659s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/model.sdf
+[28.659s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin
+[28.660s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc
+[28.660s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/CMakeLists.txt
+[28.660s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc
+[28.660s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc
+[28.660s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls
+[28.660s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.config
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.sdf
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model-1_4_.sdf
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.config
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.sdf
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes
+[28.661s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes/tire.dae
+[28.662s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes/waffle_pi_base.dae
+[28.662s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes/lds.dae
+[28.662s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz
+[28.662s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz/tb3_gazebo.rviz
+[28.662s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds
+[28.662s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds/waffle.model
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds/waffle_pi.model
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds/burger.model
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4/waffle.model
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4/waffle_pi.model
+[28.663s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4/burger.model
+[28.664s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses
+[28.664s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses/waffle.model
+[28.664s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses/waffle_pi.model
+[28.664s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses/burger.model
+[28.664s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1
+[28.665s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1/waffle.model
+[28.665s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1/waffle_pi.model
+[28.665s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1/burger.model
+[28.665s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds
+[28.665s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds/waffle.model
+[28.665s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds/waffle_pi.model
+[28.666s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds/burger.model
+[28.666s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2
+[28.666s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2/waffle.model
+[28.666s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2/waffle_pi.model
+[28.666s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2/burger.model
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3/waffle.model
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3/waffle_pi.model
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3/burger.model
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces/waffle.model
+[28.667s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces/waffle_pi.model
+[28.668s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces/burger.model
+[28.668s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/include/
+[28.668s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/include//turtlebot3_gazebo
+[28.668s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/include//turtlebot3_gazebo/turtlebot3_drive.hpp
+[28.668s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/ament_index/resource_index/package_run_dependencies/turtlebot3_gazebo
+[28.668s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/ament_index/resource_index/parent_prefix_path/turtlebot3_gazebo
+[28.669s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/ament_prefix_path.sh
+[28.669s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/ament_prefix_path.dsv
+[28.671s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/path.sh
+[28.671s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/path.dsv
+[28.671s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.bash
+[28.671s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.sh
+[28.671s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.zsh
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.dsv
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.dsv
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/ament_index/resource_index/packages/turtlebot3_gazebo
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/ament_cmake_export_include_directories-extras.cmake
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig.cmake
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig-version.cmake
+[28.672s] -- Installing: /home/yeray/Documentos/GitHub/Ysolve-bot/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.xml
+[28.673s] Invoked command in '/home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yeray/turtlebot3_ws/install/yeray_my_nav2_system:/home/yeray/turtlebot3_ws/install/provide_map:/home/yeray/turtlebot3_ws/install/my_slam:/home/yeray/turtlebot3_ws/install/my_nav2_system:/home/yeray/turtlebot3_ws/install/my_first_subscriber:/home/yeray/turtlebot3_ws/install/my_first_publisher:/home/yeray/turtlebot3_ws/install/my_first_node:/opt/ros/foxy PS1=(rosenv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/yeray/Documentos/GitHub/Ysolve-bot/build/turtlebot3_gazebo
