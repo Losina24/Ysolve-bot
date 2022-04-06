@@ -5,6 +5,11 @@ Trata de realizar un bot autonomo capaz de identificar incendios.
 
 Autores : Raul de la Fé, Alejandro Losa, Daniel Poquet, Yeray Candel y Daniel Burruchaga.
 
+Comandos: 
+
+- Inicio Mundo
+ros2 launch ysolve_bot_world turtlebot3_ysolve_bot_world.launch.py
+
 <img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/turtlebot3/logo_turtlebot3.png" width="300">
 
 [![kinetic-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/kinetic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/kinetic-devel)
