@@ -25,6 +25,14 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.titulo-seccion {
+  font-weight: 600;
+  font-size: 3.5rem;
+  font-family: "Kanit", "IBM Plex Mono", "Kanit", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .h2 {
   font-weight: 500;
   font-size: 1.75rem !important;
@@ -52,7 +60,7 @@
   background-color: #202022;
 }
 
-.cta {
+.cta2 {
   padding: 0.8rem 2.8rem;
   background: #514eee;
   color: white;
@@ -64,7 +72,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.cta:hover {
+.cta2:hover {
   color: white;
   background-color: #7369fd;
 }
@@ -75,4 +83,8 @@
 
 .mwmm {
     max-width: 100%;
+}
+
+.rounded-circle{
+  
 }
