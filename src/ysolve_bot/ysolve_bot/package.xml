@@ -13,6 +13,7 @@
     <author email="danielpoquet99@gmail.com">danielpoquet99@gmail.com</author>
     <buildtool_depend>ament_cmake</buildtool_depend>
     <exec_depend>ysolve_bot_world</exec_depend>
+    <exec_depend>ysolve_bot_slam</exec_depend>
     <export>
     <build_type>ament_cmake</build_type>
     </export>
