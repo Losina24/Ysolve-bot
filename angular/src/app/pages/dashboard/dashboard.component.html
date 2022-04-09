@@ -1,14 +1,14 @@
 <nav class="floating-menu">
     <h1 class="logo">MultiBot.</h1>
     <div>
-        <a href="#" class="tag img-less">
+        <button (click)="toggleCameraMenu(!cameraMenu)" [ngClass]="{'btn-active': cameraMenu}" href="#" class="tag img-less">
             <p class="tag-nombre">Ver cámara</p>
             <p class="tag-hover">Ver cámara</p>
-        </a>
-        <a href="#" class="tag img-less">
+        </button>
+        <button (click)="toggleRobotMenu(!robotMenu)" [ngClass]="{'btn-active': robotMenu}" class="tag img-less">
             <p class="tag-nombre">Ver robot</p>
             <p class="tag-hover">Ver robot</p>
-        </a>
+        </button>
         <a href="index.html" class="tag">
             <img class="tag-foto" src="./assets/img/HL individual-312.JPG">
             <p class="tag-nombre">Raúl el raulista</p>
@@ -45,19 +45,28 @@
             <button [ngClass]="{'toggle-active': navigation == Navigation.AUTOMATIC}" (click)="changeNavigation()" class="toggle">Automática</button>
         </div>
 
-        <div class="bottom-menu">
-            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn">Parar</button>
-            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn">Hacia delante</button>
-            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn disabled">Hacia atrás</button>
-            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn disabled">Izquierda</button>
-            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn disabled">Derecha</button>
+        <div class="bottom-menu" *ngIf="navigation == Navigation.MANUAL">
+            <button (click)="manualNavigationAction(ManualNavigation.STOP)" class="menu-btn">{{ ManualNavigation.STOP }}</button>
+            <button (click)="manualNavigationAction(ManualNavigation.FORWARD)" class="menu-btn">{{ ManualNavigation.FORWARD }}</button>
+            <button (click)="manualNavigationAction(ManualNavigation.BACK)" class="menu-btn">{{ ManualNavigation.BACK }}</button>
+            <button (click)="manualNavigationAction(ManualNavigation.LEFT)" class="menu-btn">{{ ManualNavigation.LEFT }}</button>
+            <button (click)="manualNavigationAction(ManualNavigation.RIGHT)" class="menu-btn">{{ ManualNavigation.RIGHT }}</button>
+        </div>
 
-            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn disabled">Punto A</button>
-            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto B</button>
-            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto C</button>
-            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto D</button>
-            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto E</button>
-            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto F</button>
+        <div class="bottom-menu" *ngIf="navigation == Navigation.AUTOMATIC">
+            <button (click)="automaticNavigationAction(AutomaticNavigation.POINT_A)" class="menu-btn">{{ AutomaticNavigation.POINT_A }}</button>
+            <button (click)="automaticNavigationAction(AutomaticNavigation.POINT_B)" class="menu-btn">{{ AutomaticNavigation.POINT_B }}</button>
+            <button (click)="automaticNavigationAction(AutomaticNavigation.POINT_C)" class="menu-btn">{{ AutomaticNavigation.POINT_C }}</button>
+            <button (click)="automaticNavigationAction(AutomaticNavigation.POINT_D)" class="menu-btn">{{ AutomaticNavigation.POINT_D }}</button>
+            <button (click)="automaticNavigationAction(AutomaticNavigation.POINT_E)" class="menu-btn">{{ AutomaticNavigation.POINT_E }}</button>
+            <button (click)="automaticNavigationAction(AutomaticNavigation.POINT_F)" class="menu-btn">{{ AutomaticNavigation.POINT_F }}</button>
         </div>
     </nav>
 </main>
+
+<section *ngIf="robotMenu" class="popup">
+    <img class="popup-img" src="./assets/img/turtlebot3-simulation-3 copia.png" alt="">
+</section>
+
+<section *ngIf="cameraMenu" class="popup camera">
+</section>
