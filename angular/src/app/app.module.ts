@@ -16,6 +16,7 @@ import { BasicSectionComponent } from './shared/components/layout/basic-section/
 import { AltSectionComponent } from './shared/components/layout/alt-section/alt-section.component';
 import { FooterComponent } from './shared/components/layout/footer/footer.component';
 import { LoginComponent } from './shared/components/login/login.component';
+import { DashboardElementComponent } from './shared/components/dashboard-element/dashboard-element.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LoginComponent } from './shared/components/login/login.component';
     BasicSectionComponent,
     AltSectionComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardElementComponent
   ],
   imports: [
     BrowserModule,

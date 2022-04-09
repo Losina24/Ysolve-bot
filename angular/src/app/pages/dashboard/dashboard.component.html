@@ -1,1 +1,63 @@
-<p>dashboard works!</p>
+<nav class="floating-menu">
+    <h1 class="logo">MultiBot.</h1>
+    <div>
+        <a href="#" class="tag img-less">
+            <p class="tag-nombre">Ver cámara</p>
+            <p class="tag-hover">Ver cámara</p>
+        </a>
+        <a href="#" class="tag img-less">
+            <p class="tag-nombre">Ver robot</p>
+            <p class="tag-hover">Ver robot</p>
+        </a>
+        <a href="index.html" class="tag">
+            <img class="tag-foto" src="./assets/img/HL individual-312.JPG">
+            <p class="tag-nombre">Raúl el raulista</p>
+            <p class="tag-hover">Desconectarse</p>
+        </a>
+    </div>
+</nav>
+
+<main class="container">
+
+    <section id="container-dashboard">
+        <app-dashboard-element property="Nombre del robot" value="MultiBot de Raúl"></app-dashboard-element>
+        <app-dashboard-element property="Identificador" value="MULTIBOT_21"></app-dashboard-element>
+        <app-dashboard-element property="Estado" value="En movimiento"></app-dashboard-element>
+        <app-dashboard-element property="Velocidad" value="5 km/h"></app-dashboard-element>
+        <app-dashboard-element property="Ángulo de giro" value="20º"></app-dashboard-element>
+        <app-dashboard-element property="Navegación" value="Manual"></app-dashboard-element>
+    </section>
+
+    <section id="container-map">
+        <span id="robot-icon"></span>
+        <span id="waypoint-icon-A" class="waypoint-icon">A</span>
+        <span id="waypoint-icon-B" class="waypoint-icon">B</span>
+        <span id="waypoint-icon-C" class="waypoint-icon">C</span>
+        <span id="waypoint-icon-D" class="waypoint-icon">D</span>
+        <span id="waypoint-icon-E" class="waypoint-icon">E</span>
+        <span id="waypoint-icon-F" class="waypoint-icon">F</span>
+        <img class="map" src="./assets/img/mapa.png" alt="">
+    </section>
+
+    <nav id="navigation-menu">
+        <div class="floating-buttons">
+            <button [ngClass]="{'toggle-active': navigation == Navigation.MANUAL}" (click)="changeNavigation()" class="toggle">Manual</button>
+            <button [ngClass]="{'toggle-active': navigation == Navigation.AUTOMATIC}" (click)="changeNavigation()" class="toggle">Automática</button>
+        </div>
+
+        <div class="bottom-menu">
+            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn">Parar</button>
+            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn">Hacia delante</button>
+            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn disabled">Hacia atrás</button>
+            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn disabled">Izquierda</button>
+            <button *ngIf="navigation == Navigation.MANUAL" class="menu-btn disabled">Derecha</button>
+
+            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn disabled">Punto A</button>
+            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto B</button>
+            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto C</button>
+            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto D</button>
+            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto E</button>
+            <button *ngIf="navigation == Navigation.AUTOMATIC" class="menu-btn">Punto F</button>
+        </div>
+    </nav>
+</main>
