@@ -46,6 +46,14 @@
             <button [ngClass]="{'toggle-active': navigation == Navigation.AUTOMATIC}" (click)="changeNavigation()" class="toggle">Automática</button>
         </div>
 
+        <div class="float-btns">
+            <button (click)="connect()" class="conectar toggle" >Conectar</button>
+        </div>
+
+        <div class="float-btns-2">
+            <button class="conectar toggle" >Pos. inicial</button>
+        </div>
+
         <div class="bottom-menu" *ngIf="navigation == Navigation.MANUAL">
             <button (click)="stopMove()" class="menu-btn">{{ ManualNavigation.STOP }}</button>
             <button (click)="moveForward()" class="menu-btn">{{ ManualNavigation.FORWARD }}</button>
