@@ -16,6 +16,7 @@ A continuación se describirán las funcionalidades de ambas partes del proyecto
     - [**Comenzando**](#comenzando)
     - [**Estructura de la aplicación**](#estructura-de-la-aplicación)
     - [**Funcionalidades**](#funcionalidades)
+- [**Licencia**](#licencia)
 
 # **ROS2**
 Para desarrollar el YsolveBot utilizamos ***ROS2*** como framework o conjunto de herramientas para implementar distintas funcionalidades tales como la ***navegación manual***, la ***navegación autónoma***, la ***conexión entre el robot y la web***, el ***envío de ordenes***, etc. 
@@ -36,7 +37,7 @@ Para desarrollar el YsolveBot utilizamos ***ROS2*** como framework o conjunto de
 La web cumple dos propósitos: dar a conocer el producto a nuevos clientes y servir como interfaz gráfica del robot. Con esto en mente, se ha divido en dos partes, la **landing page** y el **dashboard**.
 
 ## **Requerimientos previos**
-Esta aplicación web ha sido desarrollada utilizando **Angular 12**, un framework que permite la creación de [Single-Page applications](https://es.wikipedia.org/wiki/Single-page_application) y la división de los elementos del frontend en componentes reutilizables. Este framework utiliza *TypeScript* y *Node.js*, por tanto, para poder ejecutar el servicio se deben instalar los siguientes paquetes:
+Esta aplicación web ha sido desarrollada utilizando **Angular 12**, un framework que permite la creación de [Single-Page applications](https://es.wikipedia.org/wiki/Single-page_application) y la división de los elementos del frontend en componentes reutilizables. Además, se ha utilizado la libreri **Anime.js** para animar elementos de la interfaz gráfica y **Three.js** para implementar un motor gráfico que nos permita mostrar renders del robot en la web. Angular utiliza *TypeScript* y *Node.js*, por tanto, para poder ejecutar el servicio se deben instalar los siguientes paquetes:
 
 - [Node.js](https://nodejs.org/en/download/)
 - Angular:
@@ -112,3 +113,32 @@ angular/
         ├── styles.scss
         └── test.ts
 ```
+
+## **Funcionalidades**
+
+### Landing Page
+La landing page es primera página que ve el usuario cuando entra. Su objetivo es mostrar las funcionalidades del producto al posible cliente. Hemos dividido esta página en distintas secciones, cada una en un componente distinto:
+
+- **Header:** El es elemento que se muestra en la parte superior de la pantalla. Muestra el logotipo, un enlace a la página de Ysolve y un boton que abre el menú de login.
+- **Main cover:** Este componente contiene la primera sección de la landing page, que muestra un título, con una imagen del robot y un call to action.
+- **Main quote:** Contiene una cita que se muestra después del main cover. Sirve para separar secciones y enfatizar la calidad del producto.
+- **Features section:** Esta sección contiene una imagen de la futura aplicación y una descripción de las funcionalidades del producto.
+- **Basic section:** Esta sección contiene un texto básico y una imagen para acompañarlo.
+- **Alt section:** Esta sección contiene un call to action que lleva a la página de Ysolve.
+- **Footer:** El pie de página de la web.
+
+### Login
+Es un sencillo formulario con dos campos que permite al usuario acceder al dashboard del robot.
+
+### Dashboard
+El dashboard es la otra página implementada. Se utiliza como interfaz gráfica para comunicarse con el robot. Contiene las siguientes funcionalidades:
+
+- **Menú de información:** Muestra una serie de etiquetas con información del robot como el nombre, la velocidad, el ángulo de giro, etc.
+- **Mapa:** Es una representación visual del mundo por el cuál se mueve el robot. Tiene una serie de waypoints a los que el robot puede desplazarse desde el menú de navegación.
+- **Menú de navegación:** Tiene dos modos: manual y automática. En el modo manual, se pueden enviar acciones al robot indicando la dirección en la que se debe mover. En modo automático, se le indica el punto al que quiere que se desplace.
+- **Ver robot:** Es un menú activable que muestra un render del robot utilizando Three.js.
+- **Ver cámara:** Es un menú activable que muestra vídeo en directo desde la cámara del robot (no implementado en el robot todavía).
+
+ # **Licencia**
+El código de este repositorio es propiedad de Ysolve.
+Copyright © 2022, Ysolve.
