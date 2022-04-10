@@ -1,0 +1,26 @@
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Iniciar sesión</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body border-0 p-4">
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="form-floating mb-3">
+                        <input [(ngModel)]="email" class="form-control" name="email" type="email" placeholder="Introduce tu email" data-sb-validations="required" />
+                        <label for="name">Correo electrónico</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">El correo electrónico es obligatorio.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input [(ngModel)]="password" class="form-control" name="password" type="password" placeholder="Introduce tu contraseña" data-sb-validations="required,email" />
+                        <label for="email">Contraseña</label>
+                        <div class="invalid-feedback" data-sb-feedback="password:required">No has escrito la contraseña.</div>
+                        <div class="invalid-feedback" data-sb-feedback="password:email">La contraseña es incorrecta.</div>
+                    </div>
+                    <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" #btn (click)="submit()">Enviar</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

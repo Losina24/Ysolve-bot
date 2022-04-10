@@ -1,0 +1,82 @@
+<nav class="floating-menu">
+    <h1 class="logo">MultiBot.</h1>
+    <div>
+        <button (click)="toggleCameraMenu(!cameraMenu)" [ngClass]="{'btn-active': cameraMenu}" href="#" class="tag img-less">
+            <p class="tag-nombre">Ver cámara</p>
+            <p class="tag-hover">Ver cámara</p>
+        </button>
+        <button (click)="toggleRobotMenu(!robotMenu)" [ngClass]="{'btn-active': robotMenu}" class="tag img-less">
+            <p class="tag-nombre">Ver robot</p>
+            <p class="tag-hover">Ver robot</p>
+        </button>
+        <a href="index.html" class="tag">
+            <img class="tag-foto" src="./assets/img/HL individual-312.JPG">
+            <p class="tag-nombre">Raúl el raulista</p>
+            <p class="tag-hover">Desconectarse</p>
+        </a>
+    </div>
+</nav>
+
+<main class="container">
+
+    <section id="container-dashboard">
+        <app-dashboard-element property="Nombre del robot" value="MultiBot de Raúl"></app-dashboard-element>
+        <app-dashboard-element property="Identificador" value="MULTIBOT_21"></app-dashboard-element>
+        <app-dashboard-element property="Estado" value="En movimiento"></app-dashboard-element>
+        <app-dashboard-element property="Velocidad" value="5 km/h"></app-dashboard-element>
+        <app-dashboard-element property="Ángulo de giro" value="20º"></app-dashboard-element>
+        <app-dashboard-element property="Navegación" value="Manual"></app-dashboard-element>
+    </section>
+
+    <section id="container-map">
+        <span id="robot-icon" class="pab"></span>
+        <span id="robot-icon" class="rbs"></span>
+        <span id="waypoint-icon-A" class="waypoint-icon">A</span>
+        <span id="waypoint-icon-B" class="waypoint-icon">B</span>
+        <span id="waypoint-icon-C" class="waypoint-icon">C</span>
+        <span id="waypoint-icon-D" class="waypoint-icon">D</span>
+        <span id="waypoint-icon-E" class="waypoint-icon">E</span>
+        <span id="waypoint-icon-F" class="waypoint-icon">F</span>
+        <img class="map" src="./assets/img/mapa.png" alt="">
+    </section>
+
+    <nav id="navigation-menu">
+        <div class="floating-buttons">
+            <button [ngClass]="{'toggle-active': navigation == Navigation.MANUAL}" (click)="changeNavigation()" class="toggle">Manual</button>
+            <button [ngClass]="{'toggle-active': navigation == Navigation.AUTOMATIC}" (click)="changeNavigation()" class="toggle">Automática</button>
+        </div>
+
+        <div class="float-btns">
+            <button (click)="connect()" class="conectar toggle" >Conectar</button>
+        </div>
+
+        <div class="float-btns-2">
+            <button class="conectar toggle" >Pos. inicial</button>
+        </div>
+
+        <div class="bottom-menu" *ngIf="navigation == Navigation.MANUAL">
+            <button (click)="stopMove()" class="menu-btn">{{ ManualNavigation.STOP }}</button>
+            <button (click)="moveForward()" class="menu-btn">{{ ManualNavigation.FORWARD }}</button>
+            <button (click)="moveBack()" class="menu-btn">{{ ManualNavigation.BACK }}</button>
+            <button (click)="moveLeft()" class="menu-btn">{{ ManualNavigation.LEFT }}</button>
+            <button (click)="moveRight()" class="menu-btn">{{ ManualNavigation.RIGHT }}</button>
+        </div>
+
+        <div class="bottom-menu" *ngIf="navigation == Navigation.AUTOMATIC">
+            <button (click)="moveToA()" class="menu-btn">{{ AutomaticNavigation.POINT_A }}</button>
+            <button (click)="moveToB()" class="menu-btn">{{ AutomaticNavigation.POINT_B }}</button>
+            <button (click)="moveToC()" class="menu-btn">{{ AutomaticNavigation.POINT_C }}</button>
+            <button (click)="moveToD()" class="menu-btn">{{ AutomaticNavigation.POINT_D }}</button>
+            <button (click)="moveToE()" class="menu-btn">{{ AutomaticNavigation.POINT_E }}</button>
+            <button (click)="moveToF()" class="menu-btn">{{ AutomaticNavigation.POINT_F }}</button>
+            <button (click)="moveToAll()" class="menu-btn">{{ AutomaticNavigation.MOVE_ALL }}</button>
+        </div>
+    </nav>
+</main>
+
+<section *ngIf="robotMenu" class="popup">
+    <img class="popup-img" src="./assets/img/turtlebot3-simulation-3 copia.png" alt="">
+</section>
+
+<section *ngIf="cameraMenu" class="popup camera">
+</section>
