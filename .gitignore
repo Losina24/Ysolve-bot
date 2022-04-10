@@ -1,0 +1,5 @@
+ysolve_bot_ros2/build/**
+ysolve_bot_ros2/install/**
+ysolve_bot_ros2/log/**
+
+ysolve_bot_web/api/node_modules/**

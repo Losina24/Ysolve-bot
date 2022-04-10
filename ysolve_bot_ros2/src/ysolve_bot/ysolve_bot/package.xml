@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+    <name>ysolve_bot</name>
+    <version>0.0.0</version>
+    <description>Paquetes de Ros2</description>
+    <maintainer email="ycansam@epsg.upv.es">ycansam</maintainer>
+    <license>Apache 2.0</license>
+
+    <url type="website">http://XXXXXXX</url>
+    <url type="bugtracker">https://github.com/XXXXXX</url>
+
+
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <exec_depend>custom_interface</exec_depend>
+    <exec_depend>ysolve_bot_action</exec_depend>
+    <exec_depend>ysolve_bot_nav2_system</exec_depend>
+    <exec_depend>ysolve_bot_publisher</exec_depend>
+    <exec_depend>ysolve_bot_service</exec_depend>
+    <exec_depend>ysolve_bot_show_msg</exec_depend>
+    <exec_depend>ysolve_bot_subscriber</exec_depend>
+    <exec_depend>ysolve_bot_world</exec_depend>
+
+    <export>
+    <build_type>ament_cmake</build_type>
+    </export>
+</package>
