@@ -41,33 +41,37 @@ Esta aplicación web ha sido desarrollada utilizando **Angular 12**, un framewor
 - [Node.js](https://nodejs.org/en/download/)
 - Angular:
 ```js
-$ npm install -g @angular/cli
+npm install -g @angular/cli
 ```
 
 ## **Comenzando**
 1. Clonar el repositorio
 
-```js
-$ git clone https://github.com/Losina24/Ysolve-bot
+```bash
+git clone https://github.com/Losina24/Ysolve-bot
 ```
 
 2. Instalar los paquetes
 
-```js
-$ cd <path-to-directory>/Ysolve-bot/angular
-$ npm install
+```bash
+cd <path-to-directory>/Ysolve-bot/angular
+npm install
 ```
 
 3. Run Angular
 
-```js
-$ ng serve --open
+```bash
+ng serve --open
+```
 
-// Si el puerto 4200 ya está en uso
-$ ng serve --port {port} --open
+> Si el puerto 4200 ya está en uso
+```bash
+ng serve --port {port} --open
+```
 
-// Si quieres ejecutar el servicio sin abrir el navegador
-$ ng serve
+> Si quieres ejecutar el servicio sin abrir el navegador
+```bash
+ng serve
 ```
 
 ## **Estructura de la aplicación**
