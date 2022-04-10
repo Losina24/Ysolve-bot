@@ -75,4 +75,40 @@ ng serve
 ```
 
 ## **Estructura de la aplicación**
-
+```
+angular/
+    ├── node_modules/
+    └── src/
+        ├── app/
+        │   ├── pages/
+        │   │   ├── dashboard
+        │   │   └── landing-page
+        │   ├── shared/
+        │   │   ├── components/
+        │   │   │   ├── layout/
+        │   │   │   │   ├── alt-section
+        │   │   │   │   ├── basic-section
+        │   │   │   │   ├── feature
+        │   │   │   │   ├── features-section
+        │   │   │   │   ├── footer
+        │   │   │   │   ├── header
+        │   │   │   │   ├── main-cover
+        │   │   │   │   ├── main-quote
+        │   │   │   │   └── smartphone-render
+        │   │   │   ├── login
+        │   │   │   └── dashboard-element
+        │   │   └── services/
+        │   ├── app-routing.module.ts
+        │   ├── app.component.html
+        │   ├── app.component.scss
+        │   ├── app.component.ts
+        │   └── app.module.ts
+        ├── assets/
+        ├── enviroments/
+        ├── favicon.ico
+        ├── index.html
+        ├── main.ts
+        ├── polyfills.ts
+        ├── styles.scss
+        └── test.ts
+```
