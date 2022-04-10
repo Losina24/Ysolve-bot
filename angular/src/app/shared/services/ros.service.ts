@@ -38,4 +38,8 @@ export class RosService {
   disconnect(): Observable<any> {
     return this._httpClient.get(`${this.api}/manual/disconnect`)
   }
+
+  subs(): Observable<any> {
+    return this._httpClient.get(`${this.api}/params`)
+  }
 }
