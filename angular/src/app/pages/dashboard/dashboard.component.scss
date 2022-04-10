@@ -199,6 +199,7 @@ a, a:hover {
 }
 
 #robot-icon, .waypoint-icon {
+    position: absolute;
     width: 1.2rem;
     height: 1.2rem;
     border: 1px solid #ececec;
@@ -218,8 +219,14 @@ a, a:hover {
     font-size: .7rem;
 }
 
+.pab {
+    top: 50%;
+    left: 50%;
+}
+
 #waypoint-icon-A {
     top: 7%;
+    left: 50%;
 }
 
 #waypoint-icon-B {
@@ -228,12 +235,12 @@ a, a:hover {
 }
 
 #waypoint-icon-C {
-    bottom: 30%;
-    left: 8%;
+    top: 50%;
+    left: 92%;
 }
 
 #waypoint-icon-D {
-    bottom: 30%;
+    top: 70%;
     left: 8%;
 }
 
@@ -243,8 +250,8 @@ a, a:hover {
 }
 
 #waypoint-icon-F {
-    bottom: 4%;
-    right: 4%;
+    top: 92%;
+    left: 92%;
 }
 
 .popup {

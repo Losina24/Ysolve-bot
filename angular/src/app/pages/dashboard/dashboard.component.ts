@@ -16,11 +16,14 @@ export class DashboardComponent implements OnInit {
   AutomaticNavigation: typeof AutomaticNavigation = AutomaticNavigation;
   robotMenu: boolean = false;
   cameraMenu: boolean = false;
+  currentPoint: AutomaticNavigation | null = null;
  
   constructor(private ros: RosService) {};
 
   ngOnInit(): void {
-    this.move([0,0], [0, -200])
+    let o = Coords.getO();
+    let m = Coords.getD();
+    this.move(o[0], m[0], o[1], m[1])
   }
 
   changeNavigation() {
@@ -41,11 +44,11 @@ export class DashboardComponent implements OnInit {
     this.cameraMenu = status;
   }
 
-  move(x: any, y: any) {
+  move(fromX: any, toX: any, fromY: any, toY: any) {
     anime({
       targets: '.rbs',
-      translateX: [x[0], x[1]],
-      translateY: [y[0], y[1]],
+      top: [fromY, toY],
+      left: [fromX, toX],
       opacity: .2,
       delay: 500,
       duration: 2000,
@@ -72,29 +75,58 @@ export class DashboardComponent implements OnInit {
 
 
   moveToA() {
+    this.ros.moveToA().subscribe(res => {
+      let o = Coords.getO();
+      let m = Coords.getA();
+      this.move(o[0], m[0], o[1], m[1])
+    })
   }
   moveToB() {
+    this.ros.moveToB().subscribe(res => {
+      let o = Coords.getO();
+      let m = Coords.getB();
+      this.move(o[0], m[0], o[1], m[1])
+    })
   }
   moveToC() {
+    this.ros.moveToC().subscribe(res => {
+      let o = Coords.getO();
+      let m = Coords.getC();
+      this.move(o[0], m[0], o[1], m[1])
+    })
   }
   moveToD() {
+    this.ros.moveToD().subscribe(res => {
+      let o = Coords.getO();
+      let m = Coords.getD();
+      this.move(o[0], m[0], o[1], m[1])
+    })
   }
   moveToE() {
+    this.ros.moveToE().subscribe(res => {
+      let o = Coords.getO();
+      let m = Coords.getE();
+      this.move(o[0], m[0], o[1], m[1])
+    })
   }
   moveToF() {
+    this.ros.moveToF().subscribe(res => {
+      let o = Coords.getO();
+      let m = Coords.getF();
+      this.move(o[0], m[0], o[1], m[1])
+    })
   }
   moveToAll() {
+    this.ros.moveToAll().subscribe(res => {console.log(res)})
   }
 
 
   subscribe(){
-
+    this.ros.subs().subscribe(res => {console.log(res)})
   }
-
   connect(){
     this.ros.connect().subscribe(res => {console.log(res)})
   }
-
   disconnect(){
     this.ros.disconnect().subscribe(res => {console.log(res)})
   }  
@@ -121,4 +153,34 @@ enum AutomaticNavigation {
   POINT_E = "Punto E",
   POINT_F = "Punto F",
   MOVE_ALL = "Hacer circuito"
+}
+
+class Coords {
+  static getO() {
+    return ['50%', '50%']
+  }
+
+  static getA() {
+    return ['50%', '7%']
+  } 
+
+  static getB() {
+    return ['10%', '20%']
+  } 
+
+  static getC() {
+    return ['92%', '50%']
+  }
+  
+  static getD() {
+    return ['8%', '70%']
+  }
+
+  static getE() {
+    return ['15%', '30%']
+  }
+
+  static getF() {
+    return ['92%', '92%']
+  }
 }

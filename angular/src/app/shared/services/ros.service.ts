@@ -42,4 +42,32 @@ export class RosService {
   subs(): Observable<any> {
     return this._httpClient.get(`${this.api}/params`)
   }
+
+  moveToA(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/a`)
+  }
+
+  moveToB(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/b`)
+  }
+
+  moveToC(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/c`)
+  }
+
+  moveToD(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/d`)
+  }
+
+  moveToE(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/e`)
+  }
+
+  moveToF(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/f`)
+  }
+
+  moveToAll(): Observable<any> {
+    return this._httpClient.get(`${this.api}/automatic/all`)
+  }
 }
