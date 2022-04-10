@@ -44,6 +44,12 @@ app.get("/ros/manual/move/stop", (req, res) => {
 	console.log("DETENIENDO EL ROBOT");
 	stop();
 });
+app.get("/ros/automatic/:action", (req, res) => {
+
+	console.log("NAVEGATION ROBOT");
+	console.log(req.params.action);
+	navigation("nav_to_pose_" + req.params.action);
+});
 
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
@@ -162,6 +168,29 @@ function stop() {
 	});
 
 	topic.publish(message);
+}
+function navigation(valor){
+	data.service_busy = true
+	data.service_response = ''	
+
+	let service = new ROSLIB.Service({
+	    ros: data.ros,
+	    name: '/bot_position',
+	    serviceType: 'custom_interface/srv/BotPosition'
+	})
+
+	let request = new ROSLIB.ServiceRequest({
+	    move: valor
+	})
+
+	console.log(valor)
+	service.callService(request, (result) => {
+	    data.service_busy = false
+	    data.service_response = JSON.stringify(result)
+	}, (error) => {
+	    data.service_busy = false
+	    console.error(error)
+	})	
 }
 
 function connect() {

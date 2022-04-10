@@ -66,6 +66,98 @@ class Service(Node):
             goal_pose.pose.position.y = -2.2
             goal_pose.pose.orientation.w = 1.0
             self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_a":
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 4.0
+            goal_pose.pose.position.y = -0.05
+            goal_pose.pose.orientation.w = 1.0
+            self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_b":
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 6.1
+            goal_pose.pose.position.y = -0.24
+            goal_pose.pose.orientation.w = 1.0
+            self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_c":
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 6.14
+            goal_pose.pose.position.y = -2.48
+            goal_pose.pose.orientation.w = 1.0
+            self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_d":
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 4.38
+            goal_pose.pose.position.y = -2.33
+            goal_pose.pose.orientation.w = 1.0
+            self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_e":
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 2.0
+            goal_pose.pose.position.y = -2.5
+            goal_pose.pose.orientation.w = 1.0
+            self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_f":
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 0.3
+            goal_pose.pose.position.y = -1.6
+            goal_pose.pose.orientation.w = 1.0
+            self.send_goal(goal_pose)
+        elif request.move == "nav_to_pose_all":
+            goal_poses = []
+    
+            # Crear la posicion de tipo PoseStamped (para pasar al Goal de la accion NavigateToPose)
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 0.0
+            goal_pose.pose.position.y = -1.0
+            goal_pose.pose.orientation.w = 1.0
+            goal_poses.append(goal_pose)
+
+            goal_pose = PoseStamped()
+            # Header
+            goal_pose.header.frame_id = 'map'
+            goal_pose.header.stamp = self.get_clock().now().to_msg()
+            #Pose
+            goal_pose.pose.position.x = 1.2
+            goal_pose.pose.position.y = -3.0
+            goal_pose.pose.orientation.w = 1.0
+            goal_poses.append(goal_pose)
+            
+            self.followWaypoints(goal_poses)
+            
         elif request.move == "go_to_waypoints":
             goal_poses = []
     
