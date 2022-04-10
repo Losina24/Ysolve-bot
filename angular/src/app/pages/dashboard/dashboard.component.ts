@@ -21,8 +21,8 @@ export class DashboardComponent implements OnInit {
   constructor(private ros: RosService) {};
 
   ngOnInit(): void {
-    let o = Coords.getO();
-    let m = Coords.getD();
+    let o = Coords.getF();
+    let m = Coords.getB();
     this.move(o[0], m[0], o[1], m[1])
   }
 
@@ -57,69 +57,25 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  moveRight() {
-    this.ros.moveRight().subscribe(res => {console.log(res)})
-  }
-  moveLeft() {
-    this.ros.moveLeft().subscribe(res => {console.log(res)})
-  }
-  moveForward() {
-    this.ros.moveForward().subscribe(res => {console.log(res)})
-  }
-  moveBack() {
-    this.ros.moveBack().subscribe(res => {console.log(res)})
-  }
-  stopMove() {
-    this.ros.stopMove().subscribe(res => {console.log(res)})
-  }
+  moveRight()   { this.ros.moveRight().subscribe(res => {console.log(res)}) }
+  moveLeft()    { this.ros.moveLeft().subscribe(res => {console.log(res)}) }
+  moveForward() { this.ros.moveForward().subscribe(res => {console.log(res)}) }
+  moveBack()    { this.ros.moveBack().subscribe(res => {console.log(res)}) }
+  stopMove()    { this.ros.stopMove().subscribe(res => {console.log(res)}) }
 
 
-  moveToA() {
-    this.ros.moveToA().subscribe(res => {
-      let o = Coords.getO();
-      let m = Coords.getA();
-      this.move(o[0], m[0], o[1], m[1])
-    })
-  }
-  moveToB() {
-    this.ros.moveToB().subscribe(res => {
-      let o = Coords.getO();
-      let m = Coords.getB();
-      this.move(o[0], m[0], o[1], m[1])
-    })
-  }
-  moveToC() {
-    this.ros.moveToC().subscribe(res => {
-      let o = Coords.getO();
-      let m = Coords.getC();
-      this.move(o[0], m[0], o[1], m[1])
-    })
-  }
-  moveToD() {
-    this.ros.moveToD().subscribe(res => {
-      let o = Coords.getO();
-      let m = Coords.getD();
-      this.move(o[0], m[0], o[1], m[1])
-    })
-  }
-  moveToE() {
-    this.ros.moveToE().subscribe(res => {
-      let o = Coords.getO();
-      let m = Coords.getE();
-      this.move(o[0], m[0], o[1], m[1])
-    })
-  }
-  moveToF() {
-    this.ros.moveToF().subscribe(res => {
-      let o = Coords.getO();
-      let m = Coords.getF();
-      this.move(o[0], m[0], o[1], m[1])
-    })
-  }
-  moveToAll() {
-    this.ros.moveToAll().subscribe(res => {console.log(res)})
-  }
+  moveToA() { this.ros.moveToA().subscribe(res => { this.movement(Coords.getA()) }) }
+  moveToB() { this.ros.moveToB().subscribe(res => { this.movement(Coords.getB()) }) }
+  moveToC() { this.ros.moveToC().subscribe(res => { this.movement(Coords.getC()) }) }
+  moveToD() { this.ros.moveToD().subscribe(res => { this.movement(Coords.getD()) }) }
+  moveToE() { this.ros.moveToE().subscribe(res => { this.movement(Coords.getE()) }) }
+  moveToF() { this.ros.moveToF().subscribe(res => { this.movement(Coords.getF()) }) }
+  moveToAll() { this.ros.moveToAll().subscribe(res => {console.log(res)}) }
 
+  movement(m) {
+    let o = this.fromCurrentPoint();
+    this.move(o[0], m[0], o[1], m[1])
+  }
 
   subscribe(){
     this.ros.subs().subscribe(res => {console.log(res)})
@@ -130,6 +86,22 @@ export class DashboardComponent implements OnInit {
   disconnect(){
     this.ros.disconnect().subscribe(res => {console.log(res)})
   }  
+
+  fromCurrentPoint() {
+    if (this.currentPoint == AutomaticNavigation.POINT_A) {
+      return Coords.getA()
+    } else if (this.currentPoint == AutomaticNavigation.POINT_B) {
+      return Coords.getB()
+    } else if (this.currentPoint == AutomaticNavigation.POINT_C) {
+      return Coords.getC()
+    } else if (this.currentPoint == AutomaticNavigation.POINT_D) {
+      return Coords.getD()
+    } else if (this.currentPoint == AutomaticNavigation.POINT_E) {
+      return Coords.getE()
+    } else {
+      return Coords.getF()
+    }
+  }
 }
 
 enum Navigation {
