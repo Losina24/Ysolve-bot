@@ -148,6 +148,26 @@ a, a:hover {
     border-radius: .45rem;
 }
 
+.float-btns {
+    position: fixed;
+    margin: 1rem;
+    padding: .25rem;
+    bottom: 5rem;
+    left: 9.2rem;
+    background-color: #eceef0;
+    border-radius: .45rem;
+}
+
+.float-btns-2 {
+    position: fixed;
+    margin: 1rem;
+    padding: .25rem;
+    bottom: 5rem;
+    left: 14rem;
+    background-color: #eceef0;
+    border-radius: .45rem;
+}
+
 .toggle {
     background-color: #eceef0;
     padding: .4rem .6rem;
@@ -231,7 +251,7 @@ a, a:hover {
 
 #waypoint-icon-B {
     top: 20%;
-    right: 10%;
+    left: 90%;
 }
 
 #waypoint-icon-C {

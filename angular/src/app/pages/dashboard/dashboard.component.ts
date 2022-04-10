@@ -21,8 +21,8 @@ export class DashboardComponent implements OnInit {
   constructor(private ros: RosService) {};
 
   ngOnInit(): void {
-    let o = Coords.getF();
-    let m = Coords.getB();
+    let o = Coords.getA();
+    let m = Coords.getC();
     this.move(o[0], m[0], o[1], m[1])
   }
 
