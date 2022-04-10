@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 //@ts-ignore
 import anime from 'animejs';
+import { RosService } from 'src/app/shared/services/ros.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,8 +16,8 @@ export class DashboardComponent implements OnInit {
   AutomaticNavigation: typeof AutomaticNavigation = AutomaticNavigation;
   robotMenu: boolean = false;
   cameraMenu: boolean = false;
-
-  constructor() { }
+ 
+  constructor(private ros: RosService) {};
 
   ngOnInit(): void {
     this.move([0,0], [0, -200])
@@ -28,14 +29,6 @@ export class DashboardComponent implements OnInit {
     } else {
       this.navigation = Navigation.AUTOMATIC;
     }
-  }
-
-  manualNavigationAction(action: ManualNavigation) {
-
-  }
-
-  automaticNavigationAction(action: AutomaticNavigation) {
-
   }
 
   toggleRobotMenu(status: boolean) {
@@ -60,6 +53,51 @@ export class DashboardComponent implements OnInit {
       loop: true
     });
   }
+
+  moveRight() {
+    this.ros.moveRight().subscribe(res => {console.log(res)})
+  }
+  moveLeft() {
+    this.ros.moveLeft().subscribe(res => {console.log(res)})
+  }
+  moveForward() {
+    this.ros.moveForward().subscribe(res => {console.log(res)})
+  }
+  moveBack() {
+    this.ros.moveBack().subscribe(res => {console.log(res)})
+  }
+  stopMove() {
+    this.ros.stopMove().subscribe(res => {console.log(res)})
+  }
+
+
+  moveToA() {
+  }
+  moveToB() {
+  }
+  moveToC() {
+  }
+  moveToD() {
+  }
+  moveToE() {
+  }
+  moveToF() {
+  }
+  moveToAll() {
+  }
+
+
+  subscribe(){
+
+  }
+
+  connect(){
+    this.ros.connect().subscribe(res => {console.log(res)})
+  }
+
+  disconnect(){
+    this.ros.disconnect().subscribe(res => {console.log(res)})
+  }  
 }
 
 enum Navigation {
@@ -81,5 +119,6 @@ enum AutomaticNavigation {
   POINT_C = "Punto C",
   POINT_D = "Punto D",
   POINT_E = "Punto E",
-  POINT_F = "Punto F"
+  POINT_F = "Punto F",
+  MOVE_ALL = "Hacer circuito"
 }

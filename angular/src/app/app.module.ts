@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { AltSectionComponent } from './shared/components/layout/alt-section/alt-
 import { FooterComponent } from './shared/components/layout/footer/footer.component';
 import { LoginComponent } from './shared/components/login/login.component';
 import { DashboardElementComponent } from './shared/components/dashboard-element/dashboard-element.component';
+import { NgxRoslibService } from 'ngx-roslib';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { DashboardElementComponent } from './shared/components/dashboard-element
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NgxRoslibService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
