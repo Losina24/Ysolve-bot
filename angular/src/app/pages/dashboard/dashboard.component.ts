@@ -17,10 +17,13 @@ export class DashboardComponent implements OnInit {
   robotMenu: boolean = false;
   cameraMenu: boolean = false;
   currentPoint: AutomaticNavigation | null = null;
+  datos: any;
+  nav: string = "Manual";
  
   constructor(private ros: RosService) {};
 
   ngOnInit(): void {
+    this.subscribe();
     let o = Coords.getA();
     let m = Coords.getC();
     this.move(o[0], m[0], o[1], m[1])
@@ -29,7 +32,9 @@ export class DashboardComponent implements OnInit {
   changeNavigation() {
     if (this.navigation == Navigation.AUTOMATIC) {
       this.navigation = Navigation.MANUAL;
+      this.nav = "Manual";
     } else {
+      this.nav = "Automatic";
       this.navigation = Navigation.AUTOMATIC;
     }
   }
@@ -78,7 +83,15 @@ export class DashboardComponent implements OnInit {
   }
 
   subscribe(){
-    this.ros.subs().subscribe(res => {console.log(res)})
+
+    this.ros.subs().subscribe(res => {
+      this.datos = res.result;
+      console.log(res)
+      setTimeout(()=>{
+        this.subscribe();
+      },1000)
+    })
+    
   }
   connect(){
     this.ros.connect().subscribe(res => {console.log(res)})

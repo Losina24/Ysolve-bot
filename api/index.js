@@ -1,8 +1,13 @@
 const express = require("express");
 const ROSLIB = require("roslib");
-
+const cors = require("cors");
 const app = express();
+app.use(cors());
+
 const port = 8080;
+positionX = 0.0
+positionY = 0.0
+speed = 0.0
 
 data = {
 	ros: null,
@@ -51,23 +56,32 @@ app.get("/ros/automatic/:action", (req, res) => {
 	navigation("nav_to_pose_" + req.params.action);
 });
 
+app.get('/ros/params', (req, res) => {
+    console.log("OBTENIENDO LOS PARAMETROS DEL ROBOT")
+    res.status(200).send({
+        http: 200,
+        message: "OBTENIENDO LOS PARAMETROS DEL ROBOT",
+        result: { "positionX": positionX, "positionY": positionY, "speed": speed }
+    })
+})
+
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
 });
 
 function subscribe() {
-	let topic = new ROSLIB.Topic({
-		ros: data.ros,
-		name: "/odom",
-		messageType: "nav_msgs/msg/Odometry",
-	});
+    let topic = new ROSLIB.Topic({
+        ros: data.ros,
+        name: '/odom',
+        messageType: 'nav_msgs/msg/Odometry'
+    })
 
-	topic.subscribe((message) => {
-		console.log("message", message);
-		data.position = message.pose.pose.position;
-		//document.getElementById("positionTurtlebotX").innerText = data.position.x.toFixed(2)
-		//document.getElementById("positionTurtlebotY").innerText = data.position.y.toFixed(2)
-	});
+    topic.subscribe((message) => {
+        data.position = message.pose.pose.position
+        positionX = data.position.x.toFixed(2)
+        positionY = data.position.y.toFixed(2)
+        speed = message.twist.twist.linear.x.toFixed(2)
+    })
 }
 
 function moveRight() {
@@ -205,7 +219,7 @@ function connect() {
 
 		console.log("Conexion con ROSBridge correcta");
 
-		//subscribe()
+		subscribe()
 	});
 
 	data.ros.on("error", (error) => {
