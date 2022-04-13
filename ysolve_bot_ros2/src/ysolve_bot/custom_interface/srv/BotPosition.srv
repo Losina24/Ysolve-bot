@@ -1,6 +1,14 @@
 string move # Define el tipo de movimiento
             # "initial_pose"
-            # "nav_to_pose"
-            # "nav_to_waypoints"
+            # "go_to_pose"
+            # "nav_to_pose_a"
+            # "nav_to_pose_b"
+            # "nav_to_pose_c"
+            # "nav_to_pose_d"
+            # "nav_to_pose_e"
+            # "nav_to_pose_f"
+            # "nav_to_pose_all"
+            # "go_to_waypoints"
+            
 ---
 bool success #respuesta
