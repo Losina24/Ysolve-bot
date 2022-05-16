@@ -22,16 +22,361 @@ A continuación se describirán las funcionalidades de ambas partes del proyecto
 Para desarrollar el YsolveBot utilizamos ***ROS2*** como framework o conjunto de herramientas para implementar distintas funcionalidades tales como la ***navegación manual***, la ***navegación autónoma***, la ***conexión entre el robot y la web***, el ***envío de ordenes***, etc. 
 
 ## **Requisitos previos**
-(Hay que describir las cosas que se tienen que instalar, ros2, paquetes, python, etc.)
+Para el enterno y la programación del robot, se ha obtado por utilizar las librerías de **turtlebot3**, una plataforma estándard de robótica, muy versátil e interesante [Single-Page applications](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
 ## **Empezando**
-(Hay que describir como arrancar el proyecto)
+1. Clonar el repositorio
+
+```bash
+https://github.com/Losina24/Ysolve-bot.git
+```
+
+2. Instalar los paquetes
+
+```bash
+cd <path-to-directory>/Ysolve-bot/ysolve_bot_ros2
+npm install
+```
 
 ## **Estructura del proyecto**
-(Hay que crear un árbol de directorios)
+```
+ysolve_bot_ros2/
+    └── src/
+        ├── ysolve_bot/
+        │   ├── bag_files/
+        │   │   ├── ros2_bag_bot_position_server/
+        │   │   ├── ros2_bag_movement_server/
+        │   │   ├── ros2_bag_odom_bot_position_server/
+        │   │   └── ros2_bag_odom_bot_position_server(Prueba2)/
+        │   ├── custom_interface/
+        │   │   ├── action/
+        │   │   ├── msg/
+        │   │   └── srv/
+        │   ├── ysolve_bot/
+        │   ├── ysolve_bot_action/
+        │   │   ├── launch/
+        │   │   ├── resource/
+        │   │   ├── test/
+        │   │   ├── ysolve_bot_action/
+        │   │   ├── setup.cfg/
+        │   │   └── setup.py/   
+        │   ├── ysolve_bot_nav2_system/
+        │   │   ├── launch/
+        │   │   ├── resource/
+        │   │   ├── test/
+        │   │   ├── ysolve_nav2_system/
+        │   │   ├── setup.cfg/
+        │   │   └── setup.py/  
+        │   ├── ysolve_bot_publisher/
+        │   │   ├── launch/
+        │   │   ├── resource/
+        │   │   ├── test/
+        │   │   ├── ysolve_bot_publisher/
+        │   │   ├── setup.cfg/
+        │   │   └── setup.py/ 
+        │   ├── ysolve_bot_service/
+        │   │   ├── launch/
+        │   │   ├── resource/
+        │   │   ├── test/
+        │   │   ├── ysolve_bot_service/
+        │   │   ├── setup.cfg/
+        │   │   └── setup.py/ 
+        │   ├── ysolve_bot_show_msg/
+        │   │   ├── launch/
+        │   │   ├── resource/
+        │   │   ├── test/
+        │   │   ├── ysolve_bot_show_msg/
+        │   │   ├── setup.cfg/
+        │   │   └── setup.py/ 
+        │   ├── ysolve_bot_subscriber/
+        │   │   ├── launch/
+        │   │   ├── resource/
+        │   │   ├── test/
+        │   │   ├── ysolve_bot_subscriber/
+        │   │   ├── setup.cfg/
+        │   │   └── setup.py/ 
+        │   └── ysolve_bot_world/
+        │   │   ├── include/
+        │   │   ├── launch/
+        │   │   ├── map/
+        │   │   ├── models/
+        │   │   ├── src/
+        │   │   └── world/ 
+        └── turtlebot3_simulations/
+```
 
 ## **Paquetes**
-(Hay que enumerar y explicar los paquetes que se han implementado)
+
+### turtlebot3_simulations
+Paquete importado directamente desde el repositorio de turtlebot3 de GitHub [Single-Page applications](https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git). Tiene las librerías necesarias para poder programar, controlar y emular (gazebo) el robot.
+
+**ROBOTIS e-Manual for TurtleBot3**
+- [ROBOTIS e-Manual for TurtleBot3](http://turtlebot3.robotis.com/)
+
+**Wiki for turtlebot3_simulations Packages**
+- http://wiki.ros.org/turtlebot3_simulations (metapackage)
+- http://wiki.ros.org/turtlebot3_fake
+- http://wiki.ros.org/turtlebot3_gazebo
+
+**Open Source related to TurtleBot3**
+- [turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3)
+- [turtlebot3_msgs](https://github.com/ROBOTIS-GIT/turtlebot3_msgs)
+- [turtlebot3_simulations](https://github.com/ROBOTIS-GIT/turtlebot3_simulations)
+- [turtlebot3_applications_msgs](https://github.com/ROBOTIS-GIT/turtlebot3_applications_msgs)
+- [turtlebot3_applications](https://github.com/ROBOTIS-GIT/turtlebot3_applications)
+- [turtlebot3_autorace](https://github.com/ROBOTIS-GIT/turtlebot3_autorace)
+- [turtlebot3_deliver](https://github.com/ROBOTIS-GIT/turtlebot3_deliver)
+- [hls_lfcd_lds_driver](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver)
+- [open_manipulator_msgs](https://github.com/ROBOTIS-GIT/open_manipulator_msgs)
+- [open_manipulator](https://github.com/ROBOTIS-GIT/open_manipulator)
+- [open_manipulator_simulations](https://github.com/ROBOTIS-GIT/open_manipulator_simulations)
+- [open_manipulator_perceptions](https://github.com/ROBOTIS-GIT/open_manipulator_perceptions)
+- [open_manipulator_with_tb3_msgs](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3_msgs)
+- [open_manipulator_with_tb3](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3)
+- [open_manipulator_with_tb3_simulations](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3_simulations)
+- [dynamixel_sdk](https://github.com/ROBOTIS-GIT/DynamixelSDK)
+- [OpenCR-Hardware](https://github.com/ROBOTIS-GIT/OpenCR-Hardware)
+- [OpenCR](https://github.com/ROBOTIS-GIT/OpenCR)
+
+**Documents and Videos related to TurtleBot3**
+- [ROBOTIS e-Manual for TurtleBot3](http://turtlebot3.robotis.com/)
+- [ROBOTIS e-Manual for OpenManipulator](http://emanual.robotis.com/docs/en/platform/openmanipulator/)
+- [ROBOTIS e-Manual for Dynamixel SDK](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/)
+- [Website for TurtleBot Series](http://www.turtlebot.com/)
+- [e-Book for TurtleBot3](https://community.robotsource.org/t/download-the-ros-robot-programming-book-for-free/51/)
+- [Videos for TurtleBot3 ](https://www.youtube.com/playlist?list=PLRG6WP3c31_XI3wlvHlx2Mp8BYqgqDURU)
+
+### bag_files
+
+**Ejecutar Bag Files**
+[Terminal1]
+```
+export GAZEBO_MODEL_PATH=$HOME/Escritorio/ysolve_bot/src/ysolve_bot/ysolve_bot_world/models:$GAZEBO_MODEL_PATH
+ros2 launch ysolve_bot_nav2_system ysolve_bot_sim_nav2.launch.py use_sim_time:=True
+```
+
+[Terminal2] # 1 de de los 2
+```
+ros2 run ysolve_bot_service movement_server
+ros2 run ysolve_bot_service bot_position_server
+```
+
+**Para bot_position_server**
+[Terminal3] 
+```
+ros2 bag record nombreDelNodo
+ros2 bag record odom
+```
+
+[Terminal4]
+```
+ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'initial_pose'"
+ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'go_to_pose'"
+ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'go_to_waypoints'"
+```
+
+**Para movement_server**
+[Terminal3] 
+```
+ros2 bag record nombreDelNodo
+ros2 bag record cmd_vel
+```
+
+[Terminal4]
+```
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'derecha'"
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'izquierda'"
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'delante'"
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'atras'"
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'parar'"
+```
+
+[TerminalAny]
+```
+ros2 run plotjuggler plotjuggler
+```
+
+### custom_interface
+
+**Para mostrar lo del servicio conectado con el paquete ysolve_bot_service**
+```
+ros2 interface show custom_interface/srv/MyMoveMsg
+```
+
+### ysolve_bot_action
+
+**colcon**
+```
+colcon build --packages-select ysolve_bot_action
+```
+
+**launch**
+[Terminal1]
+```
+ros2 launch ysolve_bot_action action_server.launch.py
+```
+[Terminal2]
+```
+ros2 action list
+```
+
+**Para probar**
+[Terminal1]
+```
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+```
+[Terminal2]
+```
+ros2 launch ysolve_bot_action action_server.launch.py
+```
+[Terminal3]
+```
+ros2 launch ysolve_bot_action action_client.launch.py
+```
+
+### ysolve_bot_nav2_system
+
+Paquete de control de la navegación del turtlebot.
+
+**export**
+```
+export GAZEBO_MODEL_PATH=$HOME/Escritorio/ysolve_bot/src/ysolve_bot/ysolve_bot_world/models:$GAZEBO_MODEL_PATH
+```
+
+**Lanzar Mundo**
+```
+ros2 launch ysolve_bot_world ysolve_bot_world.launch.py
+```
+
+**Si sale el error file map yalm lo que hay que hacer es en el launch.py en vez de nav2_params.yalm cambiar a my_nav2_params.yalm para que no detecte el archivo y se pueda lanzar**
+**Lanzar NAV**
+```
+ros2 launch ysolve_bot_nav2_system ysolve_bot_nav2_system.launch.py
+```
+
+**Cargar mapa**
+```
+ros2 service call /map_server/load_map nav2_msgs/srv/LoadMap "{map_url: $HOME/Escritorio/ysolve_bot/src/ysolve_bot/ysolve_bot_nav2_system/config/ysolve_bot_map.yaml}"
+```
+
+**initial pose**
+```
+ros2 run ysolve_bot_nav2_system initial_pose_pub
+```
+
+**Ejecutar**
+
+**Luego de abrirlo esperar unos minutos a que se abra Gazebo y se configure todo. Luego darle a 2D Pose estimate, situarlo donde esta el robot y darle a navigation goal**
+```
+export GAZEBO_MODEL_PATH=$HOME/Escritorio/ysolve_bot/src/ysolve_bot/ysolve_bot_world/models:$GAZEBO_MODEL_PATH
+ros2 launch ysolve_bot_nav2_system ysolve_bot_sim_nav2.launch.py use_sim_time:=True
+```
+
+### ysolve_bot_publisher
+
+Se encarga de la publicación de datos relevantes del robot: posición, velocidad angular...
+
+**Ejecutar 1 de los dos mundos. Nunca los dos a la vez**
+```
+ros2 launch ysolve_bot_world ysolve_bot_world.launch.py
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+```
+
+**Ejecutar publisher script**
+```
+ros2 launch ysolve_bot_publisher ysolve_bot_publisher.launch.py
+ros2 launch ysolve_bot_publisher initial_pose.launch.py
+```
+
+### ysolve_bot_service
+**Compilar**
+```
+colcon build --packages-select ysolve_bot_service
+source install/setup.bash
+export TURTLEBOT3_MODEL=burger
+```
+
+**Para probar**
+[Terminal1]
+```
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+```
+
+[Terminal2]
+```
+ros2 launch ysolve_bot_service movement_server.launch.py
+```
+
+[Terminal3]
+```
+ros2 service list
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'delante'"
+ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'parar'"
+```
+
+**Si queremos hacerlo por cliente**
+```
+ros2 run ysolve_bot_service movement_client "derecha" # incluimos la direccion de giro como argumento
+```
+
+**Para probar con initial pose**
+[Termina2]
+```
+ros2 run ysolve_bot_service bot_position_server
+```
+
+[Terminal3] Deberia poner la posicion inicial en rviz
+```
+ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'initial_pose'"
+```
+
+### ysolve_bot_show_msg
+
+Este paquete se encarga de controlar los mensajes relativos con el robot; ya sea la posición, orientación...
+
+**Compialar**
+```
+colcon build --packages-select ysolve_bot_show_msg
+source install/setup.bash
+```
+
+**Ejecutar 1 de los 3**
+```
+ros2 launch ysolve_bot_show_msg show_msg.launch.py
+ros2 launch ysolve_bot_show_msg show_msg_param.launch.py
+```
+
+**Ejecutar comando con valores**
+```
+ros2 launch ysolve_bot_show_msg show_msg_param.launch.py my_distancia:=2
+```
+
+### ysolve_bot_subscriber
+**Build**
+```
+colcon build --packages-select ysolve_bot_subscriber
+source install/setup.bash
+```
+
+**launch**
+```
+ros2 launch ysolve_bot_subscriber ysolve_bot_subscriber.launch.py
+```
+
+### ysolve_bot_world
+Se encarga de abrir un entorno de simulación de turtlebot en un mapa en Gazebo.
+
+**export**
+```
+export GAZEBO_MODEL_PATH=$HOME/Documentos/Ysolve-bot/ysolve_bot_ros2/src/ysolve_bot/ysolve_bot_world/models:$GAZEBO_MODEL_PATH
+export TURTLEBOT3_MODEL=burger
+```
+
+**Lanzar Mundo**
+```
+ros2 launch ysolve_bot_world ysolve_bot_world.launch.py
+```
+
 
 # **Web**
 La web cumple dos propósitos: dar a conocer el producto a nuevos clientes y servir como interfaz gráfica del robot. Con esto en mente, se ha divido en dos partes, la **landing page** y el **dashboard**.
