@@ -19,12 +19,10 @@ export class DashboardComponent implements OnInit {
   currentPoint: AutomaticNavigation | null = null;
   datos: any;
   nav: string = "Manual";
-  connectStatus = false;
 
-  constructor(private ros: RosService) {};
+  constructor(private ros: RosService) { };
 
   ngOnInit(): void {
-    this.subscribe();
     let o = Coords.getA();
     let m = Coords.getC();
     this.move(o[0], m[0], o[1], m[1])
@@ -63,11 +61,11 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  moveRight()   { this.ros.moveRight().subscribe(res => {console.log(res)}) }
-  moveLeft()    { this.ros.moveLeft().subscribe(res => {console.log(res)}) }
-  moveForward() { this.ros.moveForward().subscribe(res => {console.log(res)}) }
-  moveBack()    { this.ros.moveBack().subscribe(res => {console.log(res)}) }
-  stopMove()    { this.ros.stopMove().subscribe(res => {console.log(res)}) }
+  moveRight() { this.ros.moveRight().subscribe(res => { console.log(res) }) }
+  moveLeft() { this.ros.moveLeft().subscribe(res => { console.log(res) }) }
+  moveForward() { this.ros.moveForward().subscribe(res => { console.log(res) }) }
+  moveBack() { this.ros.moveBack().subscribe(res => { console.log(res) }) }
+  stopMove() { this.ros.stopMove().subscribe(res => { console.log(res) }) }
 
 
   moveToA() { this.ros.moveToA().subscribe(res => { this.movement(Coords.getA()) }) }
@@ -76,30 +74,28 @@ export class DashboardComponent implements OnInit {
   moveToD() { this.ros.moveToD().subscribe(res => { this.movement(Coords.getD()) }) }
   moveToE() { this.ros.moveToE().subscribe(res => { this.movement(Coords.getE()) }) }
   moveToF() { this.ros.moveToF().subscribe(res => { this.movement(Coords.getF()) }) }
-  moveToAll() { this.ros.moveToAll().subscribe(res => {console.log(res)}) }
+  moveToAll() { this.ros.moveToAll().subscribe(res => { console.log(res) }) }
 
   movement(m) {
     let o = this.fromCurrentPoint();
     this.move(o[0], m[0], o[1], m[1])
   }
 
-  subscribe(){
-    if(this.connectStatus){
-      this.ros.subs().subscribe(res => {
-        this.datos = res.result;
-        console.log(res)
-        setTimeout(()=>{
-          this.subscribe();
-        },5000)
-      })
-    }
+  subscribe() {
+    this.ros.subs().subscribe(res => {
+      this.datos = res.result;
+      console.log(res)
+      setTimeout(() => {
+        this.subscribe();
+      }, 5000)
+    })
   }
-  connect(){
-    this.ros.connect().subscribe(res => {console.log(res); this.connectStatus = true})
+  connect() {
+    this.ros.connect().subscribe(res => { console.log(res); this.subscribe()})
   }
-  disconnect(){
-    this.ros.disconnect().subscribe(res => {console.log(res)})
-  }  
+  disconnect() {
+    this.ros.disconnect().subscribe(res => { console.log(res) })
+  }
 
   fromCurrentPoint() {
     if (this.currentPoint == AutomaticNavigation.POINT_A) {
@@ -148,16 +144,16 @@ class Coords {
 
   static getA() {
     return ['50%', '7%']
-  } 
+  }
 
   static getB() {
     return ['10%', '20%']
-  } 
+  }
 
   static getC() {
     return ['92%', '50%']
   }
-  
+
   static getD() {
     return ['8%', '70%']
   }

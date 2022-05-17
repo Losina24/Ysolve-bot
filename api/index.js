@@ -28,6 +28,11 @@ app.get("/ros/manual/disconnect", (req, res) => {
     disconnect();
 });
 
+app.post("/ros/image/send", (req, res) => {
+    console.log("MANDANDO IMAGEN");
+    disconnect();
+});
+
 app.get("/ros/manual/move/forward", async(req, res) => {
     console.log("MOVIENDO ROBOT HACIA DELANTE");
     res.send(await moveForward())
@@ -79,11 +84,21 @@ function subscribe() {
         messageType: 'nav_msgs/msg/Odometry'
     })
 
+    let topicImg = new ROSLIB.Topic({
+        ros: data.ros,
+        name: '/image',
+        messageType: 'sensor_msgs/msg/Image'
+    })
+
     topic.subscribe((message) => {
         data.position = message.pose.pose.position
         positionX = data.position.x.toFixed(2)
         positionY = data.position.y.toFixed(2)
         speed = message.twist.twist.linear.x.toFixed(2)
+    })
+
+    topicImg.subscribe((message) => {
+        console.log("*** MESSAGE IMAGE ***", message)
     })
 }
 
