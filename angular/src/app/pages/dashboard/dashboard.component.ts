@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 //@ts-ignore
 import anime from 'animejs';
+//@ts-ignore
 import { RosService } from 'src/app/shared/services/ros.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { RosService } from 'src/app/shared/services/ros.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+//@ts-ignore
 export class DashboardComponent implements OnInit {
 
   navigation: Navigation = Navigation.MANUAL;
