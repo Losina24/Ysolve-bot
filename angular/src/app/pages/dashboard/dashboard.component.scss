@@ -117,8 +117,49 @@ a, a:hover {
     align-items: center;
     position: relative;
     height: calc(100vh - 11.75rem);
-    background-color: #24ce6b;
+    background-color: #ffffff;
     overflow: hidden;
+}
+
+.map-div {
+    position: absolute;
+    width: 1500px;
+    height: calc(100vh - 13rem);
+    background-image: url('../../../assets/img/mapita.png');
+    background-position: center;
+}
+
+.left {
+    width: 1250px;
+    left: 0;
+}
+
+.imgv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: calc(100vw - 1250px);
+    height: calc(100vh - 11.5rem);
+    background-color: #121212;
+}
+
+.imgv > p {
+    color: #fcfcfc;
+    font-size: 1.2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgv > img {
+    width: calc(100vw - 1250px);
+    height: calc(100vh - 13rem);
+    padding: 1.7rem 1.2rem;
+    object-fit: cover;
 }
 
 #navigation-menu {
@@ -187,7 +228,6 @@ a, a:hover {
 }
 
 .map {
-    position: absolute;
     width: 100%;
     height: calc(100vh - 11.75rem);
     object-fit: cover;
@@ -229,7 +269,7 @@ a, a:hover {
 }
 
 .waypoint-icon {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,23 +285,23 @@ a, a:hover {
 }
 
 #waypoint-icon-A {
-    top: 7%;
+    top: 18%;
     left: 50%;
 }
 
 #waypoint-icon-B {
     top: 20%;
-    left: 90%;
+    left: 82.5%;
 }
 
 #waypoint-icon-C {
     top: 50%;
-    left: 92%;
+    left: 85%;
 }
 
 #waypoint-icon-D {
-    top: 70%;
-    left: 8%;
+    top: 75%;
+    left: 12%;
 }
 
 #waypoint-icon-E {
@@ -270,8 +310,8 @@ a, a:hover {
 }
 
 #waypoint-icon-F {
-    top: 92%;
-    left: 92%;
+    top: 58%;
+    left: 60%;
 }
 
 .popup {

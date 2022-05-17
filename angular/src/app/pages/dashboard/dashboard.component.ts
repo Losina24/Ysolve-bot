@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
   currentPoint: AutomaticNavigation | null = null;
   datos: any;
   nav: string = "Manual";
+  fire: number = 0.0;
 
   constructor(private ros: RosService) { };
 

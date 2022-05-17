@@ -29,18 +29,24 @@
         <app-dashboard-element property="Posicion Y" value="0"></app-dashboard-element>
         <app-dashboard-element property="Velocidad" value="0"></app-dashboard-element>
         <app-dashboard-element property="Navegación" value="{{nav}}"></app-dashboard-element>
+        <app-dashboard-element property="Estimación de incendios" value="{{fire}}"></app-dashboard-element>
     </section>
 
     <section id="container-map">
-        <span id="robot-icon" class="pab"></span>
-        <span id="robot-icon" class="rbs"></span>
-        <span id="waypoint-icon-A" class="waypoint-icon">A</span>
-        <span id="waypoint-icon-B" class="waypoint-icon">B</span>
-        <span id="waypoint-icon-C" class="waypoint-icon">C</span>
-        <span id="waypoint-icon-D" class="waypoint-icon">D</span>
-        <span id="waypoint-icon-E" class="waypoint-icon">E</span>
-        <span id="waypoint-icon-F" class="waypoint-icon">F</span>
-        <img class="map" src="./assets/img/mapa.png" alt="">
+        <div class="map-div" [ngClass]="{'left': cameraMenu}">
+            <!-- <span id="robot-icon" class="pab"></span>
+            <span id="robot-icon" class="rbs"></span> -->
+            <span id="waypoint-icon-A" class="waypoint-icon">A</span>
+            <span id="waypoint-icon-B" class="waypoint-icon">B</span>
+            <span id="waypoint-icon-C" class="waypoint-icon">C</span>
+            <span id="waypoint-icon-D" class="waypoint-icon">D</span>
+            <span id="waypoint-icon-E" class="waypoint-icon">E</span>
+            <span id="waypoint-icon-F" class="waypoint-icon">F</span>
+            <!-- <img class="map" src="./assets/img/mapa.png" alt=""> -->
+        </div>
+        <div *ngIf="cameraMenu" class="imgv">
+            <img src="../../../assets/img/perfil.jpeg" alt="">
+        </div>
     </section>
 
     <nav id="navigation-menu">
@@ -81,5 +87,5 @@
     <img class="popup-img" src="./assets/img/turtlebot3-simulation-3 copia.png" alt="">
 </section>
 
-<section *ngIf="cameraMenu" class="popup camera">
-</section>
+<!-- <section *ngIf="cameraMenu" class="popup camera">
+</section> -->
