@@ -19,7 +19,8 @@ export class DashboardComponent implements OnInit {
   currentPoint: AutomaticNavigation | null = null;
   datos: any;
   nav: string = "Manual";
- 
+  connectStatus = false;
+
   constructor(private ros: RosService) {};
 
   ngOnInit(): void {
@@ -83,18 +84,18 @@ export class DashboardComponent implements OnInit {
   }
 
   subscribe(){
-
-    this.ros.subs().subscribe(res => {
-      this.datos = res.result;
-      console.log(res)
-      setTimeout(()=>{
-        this.subscribe();
-      },1000)
-    })
-    
+    if(this.connectStatus){
+      this.ros.subs().subscribe(res => {
+        this.datos = res.result;
+        console.log(res)
+        setTimeout(()=>{
+          this.subscribe();
+        },5000)
+      })
+    }
   }
   connect(){
-    this.ros.connect().subscribe(res => {console.log(res)})
+    this.ros.connect().subscribe(res => {console.log(res); this.connectStatus = true})
   }
   disconnect(){
     this.ros.disconnect().subscribe(res => {console.log(res)})

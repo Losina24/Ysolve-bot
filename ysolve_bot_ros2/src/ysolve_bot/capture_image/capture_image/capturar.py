@@ -5,13 +5,15 @@ from cv_bridge import CvBridge, CvBridgeError
 from sensor_msgs.msg import Image
 from rclpy.node import Node
 from rclpy.qos import ReliabilityPolicy, QoSProfile
+import requests
 
 import time
 from PIL import Image
 import tensorflow as tf
 from keras.preprocessing import image
-import os 
+import os
 model = tf.keras.models.load_model(os.path()'./resource/model/rps.h5')
+
 
 class Ros2OpenCVImageConverter(Node):
 
@@ -36,10 +38,16 @@ class Ros2OpenCVImageConverter(Node):
         # Nos falta que se guarde la imagen cada X tiempo para ser procesada con openCV -> deteccion de bordes y color para ver si hay un incendio
         # Esta linea guarda la imagen obtenida -> cv2.imwrite("image_copy.jpg",img)
         cv2.waitKey(1)
-        time.sleep(2)
-# Convert the captured frame into RGB
+        # MANDAR IMAGEN A LA API
+        url = 'http://localhost:8080/ros'
+        myobj = {'imagen': cv_image}
+
+        x = requests.post(url, data=myobj)
+        print("response send image to api", x)
+        time.sleep(5)
+        # Convert the captured frame into RGB
         im = Image.fromarray(cv_image, 'RGB')
-# Resizing into 224x224  we trained the model with this resolution.
+        # Resizing into 224x224  we trained the model with this resolution.
         im = im.resize((224, 224))
         img_array = image.img_to_array(im)
         img_array = np.expand_dims(img_array, axis=0) / 255
@@ -49,13 +57,14 @@ class Ros2OpenCVImageConverter(Node):
         print(prediction)
         # if prediction is 0, which means there is fire in the frame.
         if prediction == 0:
-            if(probabilities[prediction] >0.52):
+            if(probabilities[prediction] > 0.52):
                 # Fire Probability
                 print(probabilities[prediction])
                 print("FUEGO")
         cv2.imshow("Capturing", frame)
         key = cv2.waitKey(1)
         cv2.destroyAllWindows()
+        time.sleep(5)
 
 
 def main(args=None):
