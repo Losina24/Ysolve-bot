@@ -10,8 +10,8 @@ import time
 from PIL import Image
 import tensorflow as tf
 from keras.preprocessing import image
-
-model = tf.keras.models.load_model('./resource/model/rps.h5')
+import os 
+model = tf.keras.models.load_model(os.path()'./resource/model/rps.h5')
 
 class Ros2OpenCVImageConverter(Node):
 
@@ -49,9 +49,10 @@ class Ros2OpenCVImageConverter(Node):
         print(prediction)
         # if prediction is 0, which means there is fire in the frame.
         if prediction == 0:
-            # Fire Probability
-            print(probabilities[prediction])
-            print("FUEGO")
+            if(probabilities[prediction] >0.52):
+                # Fire Probability
+                print(probabilities[prediction])
+                print("FUEGO")
         cv2.imshow("Capturing", frame)
         key = cv2.waitKey(1)
         cv2.destroyAllWindows()
