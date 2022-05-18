@@ -45,7 +45,7 @@
             <!-- <img class="map" src="./assets/img/mapa.png" alt=""> -->
         </div>
         <div *ngIf="cameraMenu" class="imgv">
-            <img src="../../../assets/img/perfil.jpeg" alt="">
+            <img [src]="'data:image/jpg;base64,'+image" alt="">
         </div>
     </section>
 

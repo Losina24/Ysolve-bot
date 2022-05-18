@@ -22,6 +22,7 @@ export class DashboardComponent implements OnInit {
   datos: any;
   nav: string = "Manual";
   fire: number = 0.0;
+  image: string = ""
 
   constructor(private ros: RosService) { };
 
@@ -78,6 +79,13 @@ export class DashboardComponent implements OnInit {
   moveToE() { this.ros.moveToE().subscribe(res => { this.movement(Coords.getE()) }) }
   moveToF() { this.ros.moveToF().subscribe(res => { this.movement(Coords.getF()) }) }
   moveToAll() { this.ros.moveToAll().subscribe(res => { console.log(res) }) }
+  getImage() {this.ros.getImage().subscribe(res => {
+    this.fire = res.fireProbability
+    this.image = res.lastImage
+    setTimeout(() => {
+      this.getImage();
+    }, 5000)
+  })}
 
   movement(m) {
     let o = this.fromCurrentPoint();
@@ -93,8 +101,9 @@ export class DashboardComponent implements OnInit {
       }, 5000)
     })
   }
+
   connect() {
-    this.ros.connect().subscribe(res => { console.log(res); this.subscribe()})
+    this.ros.connect().subscribe(res => { console.log(res); this.subscribe(); this.getImage()})
   }
   disconnect() {
     this.ros.disconnect().subscribe(res => { console.log(res) })

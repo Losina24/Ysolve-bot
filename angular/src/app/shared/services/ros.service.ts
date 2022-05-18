@@ -70,4 +70,8 @@ export class RosService {
   moveToAll(): Observable<any> {
     return this._httpClient.get(`${this.api}/automatic/all`)
   }
+
+  getImage(): Observable<any> {
+    return this._httpClient.get(`${this.api}/last/image`)
+  }
 }
