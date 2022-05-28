@@ -19,10 +19,16 @@ export class DashboardComponent implements OnInit {
   robotMenu: boolean = false;
   cameraMenu: boolean = false;
   currentPoint: AutomaticNavigation | null = null;
-  datos: any;
+  datos: any = {
+    positionX: 0,
+    positionY: 0,
+    speed: 0
+  }
   nav: string = "Manual";
   fire: number = 0.0;
   image: string = ""
+  firePoint: string = "";
+  modal: boolean = true;
 
   constructor(private ros: RosService) { };
 
@@ -65,6 +71,10 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  closeModal() {
+    this.modal = false;
+  }
+
   moveRight() { this.ros.moveRight().subscribe(res => { console.log(res) }) }
   moveLeft() { this.ros.moveLeft().subscribe(res => { console.log(res) }) }
   moveForward() { this.ros.moveForward().subscribe(res => { console.log(res) }) }
@@ -79,6 +89,7 @@ export class DashboardComponent implements OnInit {
   moveToE() { this.ros.moveToE().subscribe(res => { this.movement(Coords.getE()) }) }
   moveToF() { this.ros.moveToF().subscribe(res => { this.movement(Coords.getF()) }) }
   moveToAll() { this.ros.moveToAll().subscribe(res => { console.log(res) }) }
+
   getImage() {this.ros.getImage().subscribe(res => {
     this.fire = res.fireProbability
     this.image = res.lastImage
@@ -105,6 +116,7 @@ export class DashboardComponent implements OnInit {
   connect() {
     this.ros.connect().subscribe(res => { console.log(res); this.subscribe(); this.getImage()})
   }
+
   disconnect() {
     this.ros.disconnect().subscribe(res => { console.log(res) })
   }
