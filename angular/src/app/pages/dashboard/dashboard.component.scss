@@ -258,18 +258,19 @@ a, a:hover {
     background-color: #313131;
 }
 
-#robot-icon, .waypoint-icon {
+#robot-icon, .point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 1px solid #ececec;
-    border-radius: 10rem;
-    background-color: #24ce6b;
     z-index: 2;
 }
 
+#robot-icon, .waypoint-icon {
+    background-color: #24ce6b;
+}
+
 .waypoint-icon {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,6 +278,24 @@ a, a:hover {
     background-color: #4e49ed;
     font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: .7rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid #ececec;
+    border-radius: 10rem;
+    z-index: 4;
+}
+.waypoint-icon-fire {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #f7683c56;
+    border: 1px solid #ff5723;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100rem;
+    z-index: 3;
 }
 
 .pab {
@@ -314,20 +333,103 @@ a, a:hover {
     left: 60%;
 }
 
+#waypoint-icon-F > .waypoint-icon-fire {
+    display: flex;
+}
+
+#alert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1212122a;
+    backdrop-filter: blur(4px);
+    z-index: 999999;
+}
+
+.alert-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    background-color: rgb(240, 240, 240);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
+.alert-popup > div {
+    display: flex;
+    align-items: center;
+}
+
+.alert-popup svg {
+    color: #e94848;
+    margin: 0 1.8rem 0 1rem;
+    animation: mymove 2.5s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        transform: scale(1.1);
+        -webkit-filter: drop-shadow( 0px 0px 10px rgb(240, 81, 41));
+        filter: drop-shadow( 0px 0px 10px rgb(240, 81, 41));
+    }
+}
+
 .popup {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 9rem);
     bottom: 0;
     background-color: #fff;
     z-index: 3;
+    padding: 5rem;
+    
+}
+
+canvas {
+    width: 90%;
+    height: 26rem;
+    color: #b6b6b62a;
+}
+
+.modal-content-bot h3 {
+    font-size: 1.6rem;
+    margin-bottom: .4rem;
+}
+
+.modal-content-bot p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    margin-bottom: 1.2rem;
 }
 
 .popup-img {
     width: 30rem;
+}
+
+.botoncito {
+    background-color: #ffffff;
+    padding: .6rem 1.6rem;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    color: rgb(0, 0, 0);
+    transition: all .2s ease-in-out;
+    width: 100%;
+}
+
+.botoncito:hover {
+    color: white;
+    background-color:#e94848;
 }
 
 .camera {

@@ -6,8 +6,8 @@
             <p class="tag-hover">Ver cámara</p>
         </button>
         <button (click)="toggleRobotMenu(!robotMenu)" [ngClass]="{'btn-active': robotMenu}" class="tag img-less">
-            <p class="tag-nombre">Ver robot</p>
-            <p class="tag-hover">Ver robot</p>
+            <p class="tag-nombre">Ver histórico</p>
+            <p class="tag-hover">Ver histórico</p>
         </button>
         <a href="index.html" class="tag">
             <img class="tag-foto" src="./assets/img/HL individual-312.JPG">
@@ -17,6 +17,21 @@
     </div>
 </nav>
 
+<div id="alert-modal" *ngIf="modal">
+    <div class="alert-popup">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div class="modal-content-bot">
+                <h3>Alerta</h3>
+                <p>El robot ha detectado un incendio, proceda con cautela.</p>
+            </div>
+        </div>
+        <button class="botoncito" (click)="closeModal()">Recibido</button>
+    </div>
+</div>
+
 <main class="container">
 
     <section id="container-dashboard">
@@ -25,24 +40,36 @@
         <app-dashboard-element property="Posicion X" value="{{datos.positionX}}"></app-dashboard-element>
         <app-dashboard-element property="Posicion Y" value="{{datos.positionY}}"></app-dashboard-element>
         <app-dashboard-element property="Velocidad" value="{{datos.speed}}"></app-dashboard-element>
-        <!-- <app-dashboard-element property="Posicion X" value="0"></app-dashboard-element>
-        <app-dashboard-element property="Posicion Y" value="0"></app-dashboard-element>
-        <app-dashboard-element property="Velocidad" value="0"></app-dashboard-element> -->
         <app-dashboard-element property="Navegación" value="{{nav}}"></app-dashboard-element>
         <app-dashboard-element property="Estimación de incendios" value="{{fire}}"></app-dashboard-element>
     </section>
 
     <section id="container-map">
         <div class="map-div" [ngClass]="{'left': cameraMenu}">
-            <!-- <span id="robot-icon" class="pab"></span>
-            <span id="robot-icon" class="rbs"></span> -->
-            <span id="waypoint-icon-A" class="waypoint-icon">A</span>
-            <span id="waypoint-icon-B" class="waypoint-icon">B</span>
-            <span id="waypoint-icon-C" class="waypoint-icon">C</span>
-            <span id="waypoint-icon-D" class="waypoint-icon">D</span>
-            <span id="waypoint-icon-E" class="waypoint-icon">E</span>
-            <span id="waypoint-icon-F" class="waypoint-icon">F</span>
-            <!-- <img class="map" src="./assets/img/mapa.png" alt=""> -->
+            <div id="waypoint-icon-A" class="point">
+                <span class="waypoint-icon">A</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-B" class="point">
+                <span class="waypoint-icon">B</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-C" class="point">
+                <span class="waypoint-icon">C</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-D" class="point">
+                <span class="waypoint-icon">D</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-E" class="point">
+                <span class="waypoint-icon">E</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-F" class="point">
+                <span class="waypoint-icon">F</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
         </div>
         <div *ngIf="cameraMenu" class="imgv">
             <img [src]="'data:image/jpg;base64,'+image" alt="">
@@ -84,7 +111,10 @@
 </main>
 
 <section *ngIf="robotMenu" class="popup">
-    <img class="popup-img" src="./assets/img/turtlebot3-simulation-3 copia.png" alt="">
+    <canvas baseChart
+                [data]="lineChartData"
+                [options]="lineChartOptions"
+                [type]="lineChartType"></canvas>
 </section>
 
 <!-- <section *ngIf="cameraMenu" class="popup camera">

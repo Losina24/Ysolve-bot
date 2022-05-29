@@ -1,7 +1,12 @@
 const express = require("express");
 const ROSLIB = require("roslib");
 const cors = require("cors");
+const fs = require('fs');
 const app = express();
+
+let data = fs.readFileSync('db.json');
+let historic = JSON.parse(data);
+
 app.use(cors());
 
 const port = 8080;
@@ -58,7 +63,6 @@ app.get("/ros/manual/move/stop", async(req, res) => {
     res.send(await stop())
 });
 app.get("/ros/automatic/:action", (req, res) => {
-
     console.log("NAVEGATION ROBOT");
     console.log(req.params.action);
     navigation("nav_to_pose_" + req.params.action);

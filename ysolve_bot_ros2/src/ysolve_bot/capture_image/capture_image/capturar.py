@@ -2,13 +2,19 @@ from time import sleep
 import rclpy
 import cv2
 import numpy as np
-import asyncio
-import aiohttp
+import requests
 from cv_bridge import CvBridge, CvBridgeError
 from sensor_msgs.msg import Image
 from rclpy.node import Node
 from rclpy.qos import ReliabilityPolicy, QoSProfile
-
+from PIL import Image as ImagePIL
+import tensorflow as tf
+from keras.preprocessing import image 
+#Load the saved model
+import os
+import base64
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+model = tf.keras.models.load_model('src/ysolve_bot/capture_image/capture_image/model/rps.h5')
 class Ros2OpenCVImageConverter(Node):   
 
     def __init__(self):
@@ -18,6 +24,7 @@ class Ros2OpenCVImageConverter(Node):
         self.bridge_object = CvBridge()
         #self.image_sub = self.create_subscription(Image,'/camera/image_raw',self.camera_callback,QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT))
         self.image_sub = self.create_subscription(Image,'/image',self.camera_callback,QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT))
+    
     def camera_callback(self,data):
 
         try:
@@ -27,27 +34,39 @@ class Ros2OpenCVImageConverter(Node):
             print(e)
 
         cv2.imshow("Imagen capturada por el robot", cv_image)
-        # MANDAR IMAGEN A LA API
-        print("response send image to api", self.sendtoserver(cv_image))
+        
+        frame=cv_image
+        #Convert the captured frame into RGB
+        im = ImagePIL.fromarray(frame, 'RGB')
+        
+        #224x224 train model with this image size.
+        im = im.resize((224,224))
+       
+        img_array =  tf.keras.utils.img_to_array(im)
+        img_array = np.expand_dims(img_array, axis=0) / 255
+        probabilities = model.predict(img_array)[0]
+        #predict method on model to predict 'fire' on the image
+        prediction = np.argmax(probabilities)
+        #if prediction is > 0.7 , which means there is fire in the frame.
+        if probabilities[prediction] > 0.8:
+            print("FUEGO")
+            print("probabilityAcc",probabilities[prediction])
+        print("probabilityLossAcc",probabilities)
         # Nos falta que se guarde la imagen cada X tiempo para ser procesada con openCV -> deteccion de bordes y color para ver si hay un incendio
         # Esta linea guarda la imagen obtenida -> cv2.imwrite("image_copy.jpg",img)
-        cv2.waitKey(1)    
+        cv2.waitKey(1)   
         sleep(5)
-
-    async def sendtoserver(self,frame):
-        imencoded = cv2.imencode(".jpg", frame)[1]
-        url = 'http://192.168.0.119:8080/ros/image/send'
-        myobj = {'imagen': imencoded}
+        # MANDAR IMAGEN A LA API
+        self.sendtoserver(cv_image,probabilities[prediction])
         
-        async with aiohttp.ClientSession() as session:
-            async with session.post(url, json=myobj) as response:
-                print(await response.json())
-        ''' print("body",myobj)
+    def sendtoserver(self,frame,fireProbability):
+        imencoded = cv2.imencode(".jpg", frame)[1]
+        url = 'http://127.0.0.1:8080/ros/image/send/'+str(imencoded)+'/'+str(fireProbability)        
         try:
-            r = requests.post(url, 'working')
+            r = requests.post(url, '')
         except Exception as e:
             print(e)
-        print("image sent successfully") '''
+        print("image sent successfully") 
     
 def main(args=None):
 
