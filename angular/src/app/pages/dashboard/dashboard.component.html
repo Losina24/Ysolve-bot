@@ -6,8 +6,8 @@
             <p class="tag-hover">Ver cámara</p>
         </button>
         <button (click)="toggleRobotMenu(!robotMenu)" [ngClass]="{'btn-active': robotMenu}" class="tag img-less">
-            <p class="tag-nombre">Ver robot</p>
-            <p class="tag-hover">Ver robot</p>
+            <p class="tag-nombre">Ver histórico</p>
+            <p class="tag-hover">Ver histórico</p>
         </button>
         <a href="index.html" class="tag">
             <img class="tag-foto" src="./assets/img/HL individual-312.JPG">
@@ -46,12 +46,30 @@
 
     <section id="container-map">
         <div class="map-div" [ngClass]="{'left': cameraMenu}">
-            <span id="waypoint-icon-A" class="waypoint-icon">A</span>
-            <span id="waypoint-icon-B" class="waypoint-icon">B</span>
-            <span id="waypoint-icon-C" class="waypoint-icon">C</span>
-            <span id="waypoint-icon-D" class="waypoint-icon">D</span>
-            <span id="waypoint-icon-E" class="waypoint-icon">E</span>
-            <span id="waypoint-icon-F" class="waypoint-icon">F</span>
+            <div id="waypoint-icon-A" class="point">
+                <span class="waypoint-icon">A</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-B" class="point">
+                <span class="waypoint-icon">B</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-C" class="point">
+                <span class="waypoint-icon">C</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-D" class="point">
+                <span class="waypoint-icon">D</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-E" class="point">
+                <span class="waypoint-icon">E</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
+            <div id="waypoint-icon-F" class="point">
+                <span class="waypoint-icon">F</span>
+                <span class="waypoint-icon-fire"></span>
+            </div>
         </div>
         <div *ngIf="cameraMenu" class="imgv">
             <img [src]="'data:image/jpg;base64,'+image" alt="">
@@ -93,7 +111,10 @@
 </main>
 
 <section *ngIf="robotMenu" class="popup">
-    <img class="popup-img" src="./assets/img/turtlebot3-simulation-3 copia.png" alt="">
+    <canvas baseChart
+                [data]="lineChartData"
+                [options]="lineChartOptions"
+                [type]="lineChartType"></canvas>
 </section>
 
 <!-- <section *ngIf="cameraMenu" class="popup camera">

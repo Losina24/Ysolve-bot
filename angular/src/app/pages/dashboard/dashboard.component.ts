@@ -1,4 +1,6 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChartConfiguration, ChartEvent, ChartType } from 'chart.js';
+import { BaseChartDirective } from 'ng2-charts';
 //@ts-ignore
 import anime from 'animejs';
 //@ts-ignore
@@ -28,7 +30,8 @@ export class DashboardComponent implements OnInit {
   fire: number = 0.0;
   image: string = ""
   firePoint: string = "";
-  modal: boolean = true;
+  modal: boolean = false;
+  db: Array<number> = [];
 
   constructor(private ros: RosService) { };
 
@@ -36,6 +39,66 @@ export class DashboardComponent implements OnInit {
     let o = Coords.getA();
     let m = Coords.getC();
     this.move(o[0], m[0], o[1], m[1])
+  }
+
+  public lineChartData: ChartConfiguration['data'] = {
+    datasets: [
+      {
+        data: [ 65, 59, 80, 81, 56, 55, 40 ],
+        label: 'Valor de incendios detectado',
+        backgroundColor: '#24ce6b2a',
+        borderColor: '#24ce6b',
+        pointBackgroundColor: '#24ce6b',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: '#24ce6b',
+        fill: 'origin',
+      }
+    ],
+    labels: [ '', '', '', '', '', '', '' ]
+  };
+
+  lineChartOptions: ChartConfiguration['options'] = {
+    responsive: true,
+		maintainAspectRatio: false,
+    elements: {
+      line: {
+        tension: 0.5
+      }
+    },
+    scales: {
+      // We use this empty structure as a placeholder for dynamic theming.
+      x: {
+        grid: {
+          display: false
+        }
+      },
+      y:
+        {
+          position: 'left'
+        }
+    },
+
+    plugins: {
+      legend: { display: true }
+    }
+  };
+
+  public lineChartType: ChartType = 'line';
+
+  @ViewChild(BaseChartDirective) chart?: BaseChartDirective;
+
+  private static generateNumber(i: number): number {
+    return Math.floor((Math.random() * (i < 2 ? 100 : 1000)) + 1);
+  }
+
+  // events
+  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
+    console.log(event, active);
+  }
+
+  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
+    console.log(event, active);
   }
 
   changeNavigation() {
@@ -92,6 +155,7 @@ export class DashboardComponent implements OnInit {
 
   getImage() {this.ros.getImage().subscribe(res => {
     this.fire = res.fireProbability
+    this.db.push(res.fireProbability)
     this.image = res.lastImage
     setTimeout(() => {
       this.getImage();

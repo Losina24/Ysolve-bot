@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +18,8 @@ import { FooterComponent } from './shared/components/layout/footer/footer.compon
 import { LoginComponent } from './shared/components/login/login.component';
 import { DashboardElementComponent } from './shared/components/dashboard-element/dashboard-element.component';
 import { NgxRoslibService } from 'ngx-roslib';
+import { NgChartsModule } from 'ng2-charts';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,9 +42,10 @@ import { NgxRoslibService } from 'ngx-roslib';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgChartsModule,
     HttpClientModule
   ],
-  providers: [NgxRoslibService],
+  providers: [NgxRoslibService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
