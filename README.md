@@ -11,11 +11,13 @@ A continuación se describirán las funcionalidades de ambas partes del proyecto
     - [**Empezando**](#empezando)
     - [**Estructura del proyecto**](#estructura-del-proyecto)
     - [**Paquetes**](#paquetes)
+    - [**Testing**](#testing)
 - [**Web**](#web)
     - [**Requerimientos previos**](#requerimientos-previos)
     - [**Comenzando**](#comenzando)
     - [**Estructura de la aplicación**](#estructura-de-la-aplicación)
     - [**Funcionalidades**](#funcionalidades)
+    - [**Testing web**](#testing-web)
 - [**Licencia**](#licencia)
 
 # **ROS2**
@@ -113,26 +115,26 @@ Paquete importado directamente desde el repositorio de turtlebot3 de GitHub [Sin
 ### bag_files
 
 **Ejecutar Bag Files**
-[Terminal1]
+Terminal 1:
 ```
 export GAZEBO_MODEL_PATH=$HOME/Escritorio/ysolve_bot/src/ysolve_bot/ysolve_bot_world/models:$GAZEBO_MODEL_PATH
 ros2 launch ysolve_bot_nav2_system ysolve_bot_sim_nav2.launch.py use_sim_time:=True
 ```
 
-[Terminal2] # 1 de de los 2
+Terminal 2:
 ```
 ros2 run ysolve_bot_service movement_server
 ros2 run ysolve_bot_service bot_position_server
 ```
 
 **Para bot_position_server**
-[Terminal3] 
+Terminal 3: 
 ```
 ros2 bag record nombreDelNodo
 ros2 bag record odom
 ```
 
-[Terminal4]
+Terminal 4:
 ```
 ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'initial_pose'"
 ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'go_to_pose'"
@@ -140,13 +142,13 @@ ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'go_to_w
 ```
 
 **Para movement_server**
-[Terminal3] 
+Terminal 3: 
 ```
 ros2 bag record nombreDelNodo
 ros2 bag record cmd_vel
 ```
 
-[Terminal4]
+Terminal 4:
 ```
 ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'derecha'"
 ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'izquierda'"
@@ -155,7 +157,7 @@ ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'atras'"
 ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'parar'"
 ```
 
-[TerminalAny]
+Cualquier terminal:
 ```
 ros2 run plotjuggler plotjuggler
 ```
@@ -175,25 +177,25 @@ colcon build --packages-select ysolve_bot_action
 ```
 
 **launch**
-[Terminal1]
+Terminal 1:
 ```
 ros2 launch ysolve_bot_action action_server.launch.py
 ```
-[Terminal2]
+Terminal 2:
 ```
 ros2 action list
 ```
 
 **Para probar**
-[Terminal1]
+Terminal 1:
 ```
 ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
-[Terminal2]
+Terminal 2:
 ```
 ros2 launch ysolve_bot_action action_server.launch.py
 ```
-[Terminal3]
+Terminal 3:
 ```
 ros2 launch ysolve_bot_action action_client.launch.py
 ```
@@ -261,17 +263,17 @@ export TURTLEBOT3_MODEL=burger
 ```
 
 **Para probar**
-[Terminal1]
+Terminal 1:
 ```
 ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
 
-[Terminal2]
+Terminal 2:
 ```
 ros2 launch ysolve_bot_service movement_server.launch.py
 ```
 
-[Terminal3]
+Terminal 3:
 ```
 ros2 service list
 ros2 service call /movement custom_interface/srv/MyMoveMsg "move: 'delante'"
@@ -284,12 +286,13 @@ ros2 run ysolve_bot_service movement_client "derecha" # incluimos la direccion d
 ```
 
 **Para probar con initial pose**
-[Termina2]
+Termina 2:
 ```
 ros2 run ysolve_bot_service bot_position_server
 ```
 
-[Terminal3] Deberia poner la posicion inicial en rviz
+Terminal 3: 
+> Deberia poner la posicion inicial en rviz
 ```
 ros2 service call /bot_position custom_interface/srv/BotPosition "move: 'initial_pose'"
 ```
@@ -340,6 +343,9 @@ export TURTLEBOT3_MODEL=burger
 ```
 ros2 launch ysolve_bot_world ysolve_bot_world.launch.py
 ```
+
+## **Testing**
+Hemos implementado testeo en todos los módulos críticos del proyecto.
 
 
 # **Web**
@@ -447,6 +453,11 @@ El dashboard es la otra página implementada. Se utiliza como interfaz gráfica 
 - **Menú de navegación:** Tiene dos modos: manual y automática. En el modo manual, se pueden enviar acciones al robot indicando la dirección en la que se debe mover. En modo automático, se le indica el punto al que quiere que se desplace.
 - **Ver robot:** Es un menú activable que muestra un render del robot utilizando Three.js.
 - **Ver cámara:** Es un menú activable que muestra vídeo en directo desde la cámara del robot (no implementado en el robot todavía).
+
+## **Testing Web**
+Se ha implementado testeo en la página web mediante las librerías Karma y Jasmine, que permite reconocer cuando se interactua con un elemento de la interfaz, o cuando se genera un componente, entre otros muchos casos. Básicamente se ha querido asegurar que todos los elementos críticos para el funcionamiento de la aplicación están correctamente generados.
+
+![Testing web](angular/src/assets/img/karma.png)
 
  # **Licencia**
 El código de este repositorio es propiedad de Ysolve.

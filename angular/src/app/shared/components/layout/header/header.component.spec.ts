@@ -19,7 +19,7 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Componente generado correctamente', () => {
     expect(component).toBeTruthy();
   });
 });
