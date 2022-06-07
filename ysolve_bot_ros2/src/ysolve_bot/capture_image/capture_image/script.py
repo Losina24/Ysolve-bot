@@ -1,3 +1,7 @@
+# Nombre: script.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para aplicar un filtro de OpenCV y detectar si hay fuego o no mediante Tensorflow
+
 import cv2,time
 import numpy as np
 from PIL import Image

@@ -1,3 +1,8 @@
+# Nombre: action_client.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para recibir acciones del servidor de acciones
+
+
 #action_client.py
 import rclpy
 from rclpy.action import ActionClient

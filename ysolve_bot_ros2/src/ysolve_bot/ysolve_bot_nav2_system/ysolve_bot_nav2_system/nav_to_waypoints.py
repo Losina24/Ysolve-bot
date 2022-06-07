@@ -1,3 +1,7 @@
+# Nombre: nav_to_waypoints.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para que el robot se pueda desplazar entre distintos puntos definidos en el mapa
+
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node

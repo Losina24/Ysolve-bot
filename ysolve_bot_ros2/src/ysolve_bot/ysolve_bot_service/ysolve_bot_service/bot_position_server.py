@@ -1,3 +1,7 @@
+# Nombre: bot_position_server.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para poder navegar hasta distintas posiciones con el robot
+
 # Importar mensajes
 from custom_interface.srv import BotPosition
 

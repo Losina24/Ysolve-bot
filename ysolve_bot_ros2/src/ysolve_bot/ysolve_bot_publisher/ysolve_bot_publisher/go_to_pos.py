@@ -1,3 +1,7 @@
+# Nombre: go_to_pos.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para que el robot se pueda desplazar hasta una posición
+
 import rclpy
 # importamos las librerias ROS2 de python 
 from rclpy.node import Node

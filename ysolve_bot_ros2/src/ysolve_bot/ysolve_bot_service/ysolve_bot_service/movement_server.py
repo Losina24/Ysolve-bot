@@ -1,3 +1,7 @@
+# Nombre: movement_server.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para crear un servidor que reciba las direcciones y se las comunique al cliente
+
 # Importar mensajes
 from geometry_msgs.msg import Twist
 from custom_interface.srv import MyMoveMsg

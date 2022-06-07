@@ -1,3 +1,7 @@
+# Nombre: ysolve_bot_publisher.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para poder publicar en topics
+
 import rclpy
 # importamos las librerias ROS2 de python 
 from rclpy.node import Node

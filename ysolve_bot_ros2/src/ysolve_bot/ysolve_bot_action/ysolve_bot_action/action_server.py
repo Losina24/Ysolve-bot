@@ -1,3 +1,7 @@
+# Nombre: action_server.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para poder enviar acciones al cliente
+
 # action_server.py
 import rclpy
 from rclpy.action import ActionServer

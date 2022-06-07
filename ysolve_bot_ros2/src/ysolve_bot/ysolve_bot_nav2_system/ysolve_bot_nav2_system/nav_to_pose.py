@@ -1,4 +1,6 @@
-
+# Nombre: nav_to_pose.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para que el robot se pueda desplazar hasta una posición
 
 import rclpy
 from rclpy.action import ActionClient

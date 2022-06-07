@@ -1,3 +1,7 @@
+# Nombre: initial_pose.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para establecer la posición inicial del robot
+
 # initial_pose_pub.py
 import sys
 import rclpy

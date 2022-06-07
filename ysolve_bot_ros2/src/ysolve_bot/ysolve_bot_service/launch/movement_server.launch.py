@@ -1,3 +1,7 @@
+# Nombre: movement_server.launch.py
+# Autor: Ysolve
+# Descripción: Script de lanzamiento del servidor de movimiento de ROS
+
 from launch import LaunchDescription
 from launch_ros.actions import Node
 

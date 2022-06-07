@@ -1,3 +1,7 @@
+# Nombre: capturar.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para capturar imagenes desde el robot y detectar la posibilidad de que haya fuego
+
 from time import sleep
 import rclpy
 import cv2

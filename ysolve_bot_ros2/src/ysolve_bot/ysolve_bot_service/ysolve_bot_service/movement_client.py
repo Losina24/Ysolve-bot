@@ -1,3 +1,7 @@
+# Nombre: movement_client.py
+# Autor: Ysolve
+# Descripción: Script con la lógica necesaria para que el robot se mueva cuando se le indique una dirección
+
 #importamos el mensaje
 from custom_interface.srv import MyMoveMsg
 #importamos la bib ROS2 para python
