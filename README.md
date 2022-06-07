@@ -345,7 +345,11 @@ ros2 launch ysolve_bot_world ysolve_bot_world.launch.py
 ```
 
 ## **Testing**
-Hemos implementado testeo en todos los módulos críticos del proyecto.
+Hemos implementado testeo en varios modulos críticos del proyecto para asegurarnos de que todo funciona correctamente y que no hemos metido ningún cambio que rompa el código. En concreto, se han implementado testing en 4 módulos: 
+- Capture image
+- Publisher
+- Service
+- Subscriber
 
 
 # **Web**
